@@ -170,560 +170,571 @@
 </header>
 
   <!-- Main Content -->
-  <main id="beranda" class="relative min-h-screen w-full 
+ <main id="beranda" class="relative min-h-screen w-full 
              bg-white 
              flex items-center justify-center overflow-hidden">
 
-    <!-- Overlay Nuansa Hijau-Teal (tipis banget) -->
-    <div class="absolute inset-0 bg-gradient-to-r from-emerald-400/10 via-teal-300/10 to-green-400/10"></div>
+  <!-- Overlay Nuansa Hijau-Teal (tipis banget) -->
+  <div class="absolute inset-0 bg-gradient-to-r from-emerald-400/10 via-teal-300/10 to-green-400/10"></div>
 
-    <!-- Gradient Fade Bawah (putih → transparan) -->
-    <div class="absolute bottom-0 left-0 w-full h-28 
+  <!-- Gradient Fade Bawah (putih → transparan) -->
+  <div class="absolute bottom-0 left-0 w-full h-28 
               bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
 
-    <div class="relative max-w-7xl mx-auto px-6 py-24 
-              grid lg:grid-cols-2 gap-16 items-center z-10">
+  <div class="relative max-w-7xl mx-auto px-6 py-16 md:py-24 
+              grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center z-10">
 
+    <!-- Left Content -->
+    <div class="space-y-6 md:space-y-8 animate-slideIn text-center lg:text-left">
+      <div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-4 md:mb-6 text-gray-900 drop-shadow-sm">
+          Selamat Datang di<br>
+          SMKNJUARA<br>
+          <span class="text-teal-600">Sekolah Unggulan</span>
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-xl mx-auto lg:mx-0">
+          Selamat datang di SMK Jabar Juara, institusi pendidikan vokasi terkemuka di Jawa Barat
+          yang berkomitmen mencetak generasi muda berdaya saing global.
+          Berlokasi strategis di Kota Bandung, SMK Jabar Juara hadir sebagai jawaban atas kebutuhan industri.
+        </p>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="animate-fadeInUp">
+        <button
+          class="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-xl font-semibold text-base sm:text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center space-x-2 mx-auto lg:mx-0">
+          <span>Jelajahi Program →</span>
+        </button>
+      </div>
+
+      <!-- Service Tags -->
+      <div class="flex flex-wrap justify-center lg:justify-start gap-3 animate-fadeInUp">
+        <span
+          class="px-3 sm:px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-xs sm:text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">💻
+          Lab PPLG</span>
+        <span
+          class="px-3 sm:px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-xs sm:text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">📊
+          Lab MPLB</span>
+        <span
+          class="px-3 sm:px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-xs sm:text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">📚
+          Perpustakaan</span>
+        <span
+          class="px-3 sm:px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-xs sm:text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">🏟️
+          Lapangan</span>
+      </div>
+    </div>
+
+    <!-- Right Visual -->
+    <div class="relative flex justify-center items-center mt-10 lg:mt-0">
+      <img src="asset/foto/sma.png" alt="Hero Illustration" class="w-64 sm:w-80 md:w-[400px] lg:w-[500px] h-auto rounded-xl">
+    </div>
+  </div>
+</main>
+
+  <!-- Tentang Kami Section -->
+<section id="tentang-kami" class="py-16 sm:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <!-- Header -->
+    <div class="text-orange-500 text-sm sm:text-base font-medium mb-3 sm:mb-5">
+      Tentang Kami
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="text-gray-900 text-2xl sm:text-3xl md:text-5xl font-bold leading-snug sm:leading-tight mb-4 sm:mb-5">
+      Membangun Masa Depan<br class="hidden sm:block">Melalui Pendidikan
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="text-gray-700 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-2xl">
+      Sekolah kami memiliki tujuan agar siswa mampu mengembangkan bakat dan minat yang dimiliki
+    </p>
+
+    <!-- Content Section -->
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-10 items-start mb-10">
       <!-- Left Content -->
-      <div class="space-y-8 animate-slideIn">
-        <div>
-          <h1 class="text-6xl font-black leading-tight mb-6 text-gray-900 drop-shadow-sm">
-            Selamat Datang di<br>
-            SMKNJUARA<br>
-            <span class="text-teal-600">Sekolah Unggulan</span>
-          </h1>
-          <p class="text-xl text-gray-700 leading-relaxed max-w-lg">
-            Selamat datang di SMK Jabar Juara, institusi pendidikan vokasi terkemuka di Jawa Barat
-            yang berkomitmen mencetak generasi muda berdaya saing global.
-            Berlokasi strategis di Kota Bandung, SMK Jabar Juara hadir sebagai jawaban atas kebutuhan industri.
-          </p>
+      <div class="flex-1 space-y-5">
+        <!-- Visi Card -->
+        <div
+          class="bg-white rounded-2xl p-5 sm:p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+          <div class="flex items-center mb-3 sm:mb-4">
+            <div
+              class="w-9 h-9 sm:w-10 sm:h-10 bg-primary-blue rounded-full flex items-center justify-center text-white font-bold mr-3">
+              V
+            </div>
+            <h3 class="text-base sm:text-lg font-semibold text-gray-800">Visi Sekolah</h3>
+          </div>
+          <div class="text-gray-600 text-sm sm:text-base leading-relaxed">
+            <p>"Menjadi lembaga pendidikan vokasi unggulan yang menghasilkan tenaga terampil, inovatif, dan berdaya
+              saing di bidang teknologi untuk mendukung pembangunan daerah dan nasional."</p>
+          </div>
+        </div>
+
+        <!-- Misi Card -->
+        <div
+          class="bg-white rounded-2xl p-5 sm:p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+          <div class="flex items-center mb-3 sm:mb-4">
+            <div
+              class="w-9 h-9 sm:w-10 sm:h-10 bg-primary-orange rounded-full flex items-center justify-center text-white font-bold mr-3">
+              M
+            </div>
+            <h3 class="text-base sm:text-lg font-semibold text-gray-800">Misi Sekolah</h3>
+          </div>
+          <div class="text-gray-600 text-sm sm:text-base leading-relaxed space-y-2 sm:space-y-3">
+            <p>Menyelenggarakan pembelajaran berbasis kompetensi dengan standar industri.</p>
+            <p>Mengembangkan laboratorium dan fasilitas praktik modern yang mendukung keterampilan siswa.</p>
+            <p>Menjalin kemitraan strategis dengan dunia usaha, industri, dan perguruan tinggi.</p>
+            <p>Mengembangkan karakter profesional: disiplin, integritas, kreativitas, dan semangat kewirausahaan.</p>
+            <p>Mendorong pembelajaran berbasis proyek, riset terapan, dan praktik kerja nyata (PKL/magang).</p>
+          </div>
         </div>
 
         <!-- CTA Button -->
-        <div class="animate-fadeInUp">
-          <button
-            class="px-8 py-4 bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-xl font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center space-x-2">
-            <span>Jelajahi Program →</span>
-          </button>
-        </div>
-
-        <!-- Service Tags -->
-        <div class="flex flex-wrap gap-3 animate-fadeInUp">
-          <span
-            class="px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">💻
-            Lab PPLG</span>
-          <span
-            class="px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">📊
-            Lab MPLB</span>
-          <span
-            class="px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">📚
-            Perpustakaan</span>
-          <span
-            class="px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">🏟️
-            Lapangan</span>
-        </div>
+        <button onclick="showMore()"
+          class="bg-primary-blue text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-blue-600 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300">
+          Selengkapnya
+        </button>
       </div>
 
-      <!-- Right Visual -->
-      <div class="relative flex justify-center items-center">
-        <img src="asset/foto/sma.png" alt="Hero Illustration" class="w-[500px] h-auto rounded-xl -mt-20">
-      </div>
-    </div>
-  </main>
+      <!-- Right Content -->
+      <div class="flex-1 w-full">
+        <div class="relative h-64 sm:h-80 md:h-96 lg:h-[400px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
+            alt="Siswa belajar bersama" class="w-full h-full object-cover">
 
-  <!-- Tentang Kami Section -->
-  <section id="tentang-kami" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <!-- Header -->
-      <div class="text-orange-500 text-base font-medium mb-5">
-        Tentang Kami
-      </div>
-
-      <!-- Main Title -->
-      <h1 class="text-gray-900 text-4xl md:text-5xl font-bold leading-tight mb-5">
-        Membangun Masa Depan<br>Melalui Pendidikan
-      </h1>
-
-      <!-- Subtitle -->
-      <p class="text-gray-700 text-lg leading-relaxed mb-10 max-w-2xl">
-        Sekolah kami memiliki tujuan agar siswa mampu mengembangkan bakat dan minat yang dimiliki
-      </p>
-
-      <!-- Content Section -->
-      <div class="flex flex-col lg:flex-row gap-10 items-start mb-10">
-        <!-- Left Content -->
-        <div class="flex-1 space-y-5">
-          <!-- Visi Card -->
-          <div
-            class="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-fade-in">
-            <div class="flex items-center mb-4">
-              <div
-                class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center text-white font-bold mr-3">
-                V
-              </div>
-              <h3 class="text-lg font-semibold text-gray-800">Visi Sekolah</h3>
-            </div>
-            <div class="text-gray-600 text-sm leading-relaxed">
-              <p>"Menjadi lembaga pendidikan vokasi unggulan yang menghasilkan tenaga terampil, inovatif, dan berdaya
-                saing di bidang teknologi untuk mendukung pembangunan daerah dan nasional."</p>
-            </div>
-          </div>
-
-          <!-- Misi Card -->
-          <div
-            class="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-fade-in-delay">
-            <div class="flex items-center mb-4">
-              <div
-                class="w-10 h-10 bg-primary-orange rounded-full flex items-center justify-center text-white font-bold mr-3">
-                M
-              </div>
-              <h3 class="text-lg font-semibold text-gray-800">Misi Sekolah</h3>
-            </div>
-            <div class="text-gray-600 text-sm leading-relaxed space-y-3">
-              <p>Menyelenggarakan pembelajaran berbasis kompetensi dengan standar industri.</p>
-              <p>Mengembangkan laboratorium dan fasilitas praktik modern yang mendukung keterampilan siswa.</p>
-              <p>Menjalin kemitraan strategis dengan dunia usaha, industri, dan perguruan tinggi.</p>
-              <p>Mengembangkan karakter profesional: disiplin, integritas, kreativitas, dan semangat kewirausahaan.</p>
-              <p>Mendorong pembelajaran berbasis proyek, riset terapan, dan praktik kerja nyata (PKL/ magang).</p>
-            </div>
-          </div>
-
-          <!-- CTA Button -->
-          <button onclick="showMore()"
-            class="bg-primary-blue text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-600 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300">
-            Selengkapnya
-          </button>
-        </div>
-
-        <!-- Right Content -->
-        <div class="flex-1">
-          <div class="relative h-96 lg:h-[400px] rounded-3xl overflow-hidden shadow-lg">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
-              alt="Siswa belajar bersama" class="w-full h-full object-cover">
-
-            <!-- Overlay Card -->
-            <div class="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-              <h4 class="font-semibold text-gray-800 mb-1">Alumni Bekerja</h4>
-              <p class="text-sm text-gray-600">Dalam 6 bulan setelah lulus</p>
-            </div>
+          <!-- Overlay Card -->
+          <div class="absolute bottom-3 sm:bottom-5 left-3 sm:left-5 right-3 sm:right-5 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-lg">
+            <h4 class="font-semibold text-gray-800 text-sm sm:text-base mb-0.5 sm:mb-1">Alumni Bekerja</h4>
+            <p class="text-xs sm:text-sm text-gray-600">Dalam 6 bulan setelah lulus</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- fasilitas -->
-  <section class="w-full px-6 py-20 bg-gradient-to-r from-emerald-600 to-teal-500">
-    <!-- Judul -->
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white">
-        Fasilitas & Prestasi
-      </h2>
-      <p class="text-emerald-100 mt-2">Pencapaian yang membanggakan selama 25 tahun</p>
+  <section class="w-full px-4 sm:px-6 py-16 sm:py-20 bg-gradient-to-r from-emerald-600 to-teal-500">
+  <!-- Judul -->
+  <div class="text-center mb-8 sm:mb-12">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
+      Fasilitas & Prestasi
+    </h2>
+    <p class="text-emerald-100 mt-2 text-sm sm:text-base">
+      Pencapaian yang membanggakan selama 25 tahun
+    </p>
+  </div>
+
+  <!-- Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+    
+    <!-- Card Ruang Kelas -->
+    <div
+      class="bg-white/10 backdrop-blur-lg rounded-xl p-5 sm:p-6 text-center border border-white/20 hover:bg-white/20 transition duration-300">
+      <div class="flex items-center justify-center mb-3 sm:mb-4">
+        <div
+          class="bg-gradient-to-tr from-emerald-400 to-teal-300 text-white p-3 sm:p-4 rounded-full transform transition duration-300 hover:scale-110 hover:shadow-lg">
+          <i class="fas fa-chalkboard-teacher text-2xl sm:text-3xl"></i>
+        </div>
+      </div>
+      <h3 class="text-2xl sm:text-3xl font-bold text-white">40</h3>
+      <p class="text-emerald-100 mt-1 sm:mt-2 text-sm sm:text-base">Ruang Kelas</p>
     </div>
 
-    <!-- Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-      <!-- Card Ruang Kelas -->
-      <div
-        class="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition duration-300">
-        <div class="flex items-center justify-center mb-4">
-          <div
-            class="bg-gradient-to-tr from-emerald-400 to-teal-300 text-white p-4 rounded-full transform transition duration-300 hover:scale-110 hover:shadow-lg">
-            <i class="fas fa-chalkboard-teacher text-3xl"></i>
-          </div>
+    <!-- Card Perpustakaan -->
+    <div
+      class="bg-white/10 backdrop-blur-lg rounded-xl p-5 sm:p-6 text-center border border-white/20 hover:bg-white/20 transition duration-300">
+      <div class="flex items-center justify-center mb-3 sm:mb-4">
+        <div
+          class="bg-gradient-to-tr from-emerald-400 to-teal-300 text-white p-3 sm:p-4 rounded-full transform transition duration-300 hover:scale-110 hover:shadow-lg">
+          <i class="fas fa-book-open text-2xl sm:text-3xl"></i>
         </div>
-        <h3 class="text-3xl font-bold text-white">40</h3>
-        <p class="text-emerald-100 mt-2">Ruang Kelas</p>
       </div>
-
-      <!-- Card Perpustakaan -->
-      <div
-        class="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition duration-300">
-        <div class="flex items-center justify-center mb-4">
-          <div
-            class="bg-gradient-to-tr from-emerald-400 to-teal-300 text-white p-4 rounded-full transform transition duration-300 hover:scale-110 hover:shadow-lg">
-            <i class="fas fa-book-open text-3xl"></i>
-          </div>
-        </div>
-        <h3 class="text-3xl font-bold text-white">1</h3>
-        <p class="text-emerald-100 mt-2">Perpustakaan</p>
-      </div>
-
-      <!-- Card Aula Serbaguna -->
-      <div
-        class="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition duration-300">
-        <div class="flex items-center justify-center mb-4">
-          <div
-            class="bg-gradient-to-tr from-emerald-400 to-teal-300 text-white p-4 rounded-full transform transition duration-300 hover:scale-110 hover:shadow-lg">
-            <i class="fas fa-university text-3xl"></i>
-          </div>
-        </div>
-        <h3 class="text-3xl font-bold text-white">1</h3>
-        <p class="text-emerald-100 mt-2">Aula Serbaguna</p>
-      </div>
-
+      <h3 class="text-2xl sm:text-3xl font-bold text-white">1</h3>
+      <p class="text-emerald-100 mt-1 sm:mt-2 text-sm sm:text-base">Perpustakaan</p>
     </div>
-  </section>
+
+    <!-- Card Aula Serbaguna -->
+    <div
+      class="bg-white/10 backdrop-blur-lg rounded-xl p-5 sm:p-6 text-center border border-white/20 hover:bg-white/20 transition duration-300">
+      <div class="flex items-center justify-center mb-3 sm:mb-4">
+        <div
+          class="bg-gradient-to-tr from-emerald-400 to-teal-300 text-white p-3 sm:p-4 rounded-full transform transition duration-300 hover:scale-110 hover:shadow-lg">
+          <i class="fas fa-university text-2xl sm:text-3xl"></i>
+        </div>
+      </div>
+      <h3 class="text-2xl sm:text-3xl font-bold text-white">1</h3>
+      <p class="text-emerald-100 mt-1 sm:mt-2 text-sm sm:text-base">Aula Serbaguna</p>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Kompetensi Keahlian Section -->
-  <section id="kompetensi-keahlian" class="w-full px-6 py-20 bg-gradient-to-br from-green-50 via-white to-green-100">
-    <!-- Judul -->
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
-        Kompetensi <span class="text-green-600">Keahlian</span>
+ <section id="kompetensi-keahlian" class="w-full px-4 sm:px-6 py-16 sm:py-20 bg-gradient-to-br from-green-50 via-white to-green-100">
+  <!-- Judul -->
+  <div class="text-center mb-12 sm:mb-16 px-4">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
+      Kompetensi <span class="text-green-600">Keahlian</span>
+    </h2>
+    <p class="text-gray-500 mt-3 max-w-2xl mx-auto text-sm sm:text-base">
+      Pilihan jurusan yang dirancang untuk membekali siswa dengan keterampilan masa depan
+    </p>
+  </div>
+
+  <!-- Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-10 max-w-6xl mx-auto">
+
+    <!-- Card PPLG -->
+    <div
+      class="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-200 transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl hover:scale-[1.02]">
+      <div class="relative">
+        <img
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+          alt="PPLG" class="h-40 sm:h-44 w-full object-cover">
+      </div>
+
+      <div class="p-5 sm:p-6">
+        <h3 class="text-base sm:text-lg font-bold mb-2 text-gray-800">PPLG (Pengembangan Perangkat Lunak dan Gim)</h3>
+        <p class="text-gray-600 text-sm sm:text-base mb-4">
+          Membekali siswa dengan kemampuan merancang, membuat, dan mengembangkan aplikasi berbasis desktop, web,
+          maupun mobile. Juga belajar desain dan pengembangan gim sebagai salah satu produk kreatif digital.
+        </p>
+        <a href="jurusan.html" class="inline-block text-green-600 font-semibold text-sm hover:underline">
+          Pelajari Lebih Lanjut →
+        </a>
+      </div>
+    </div>
+
+    <!-- Card MPLB -->
+    <div
+      class="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-200 transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl hover:scale-[1.02]">
+      <div class="relative">
+        <img
+          src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          alt="MPLB" class="h-40 sm:h-44 w-full object-cover">
+      </div>
+      <div class="p-5 sm:p-6">
+        <h3 class="text-base sm:text-lg font-bold mb-2 text-gray-800">MPLB (Manajemen Perkantoran dan Layanan Bisnis)</h3>
+        <p class="text-gray-600 text-sm sm:text-base mb-4">
+          Fokus pada administrasi perkantoran, layanan bisnis, dan keterampilan komunikasi profesional. Membekali siswa
+          agar siap bekerja di perkantoran modern dengan dukungan teknologi.
+        </p>
+        <a href="jurusan.html" class="inline-block text-green-600 font-semibold text-sm hover:underline">
+          Pelajari Lebih Lanjut →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Fasilitas Section -->
+<section id="fasilitas" class="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50 relative">
+  <div class="max-w-7xl mx-auto">
+    <!-- Title -->
+    <div class="text-center mb-10 sm:mb-14 px-2">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-emerald-700 mb-3">
+        Fasilitas Sekolah
       </h2>
-      <p class="text-gray-500 mt-3 max-w-2xl mx-auto">
-        Pilihan jurusan yang dirancang untuk membekali siswa dengan keterampilan masa depan
+      <p class="text-gray-500 text-base sm:text-lg">
+        Sarana & prasarana modern untuk mendukung pembelajaran
       </p>
     </div>
 
-    <!-- Cards -->
-    <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-
-      <!-- Card PPLG -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-start lg:items-center">
+      <!-- Left Content -->
       <div
-        class="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-200 transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl hover:scale-[1.02]">
-        <div class="relative">
-          <img
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
-            alt="PPLG" class="h-44 w-full object-cover">
-        </div>
+        class="bg-gradient-to-br from-emerald-600 to-emerald-800 text-white p-6 sm:p-10 rounded-2xl shadow-2xl relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl"></div>
+        <div class="space-y-6 sm:space-y-8 relative z-10">
 
-        <div class="p-6">
-          <h3 class="text-lg font-bold mb-2 text-gray-800">PPLG (Pengembangan Perangkat Lunak dan Gim)</h3>
-          <p class="text-gray-600 text-sm mb-4">
-            Membekali siswa dengan kemampuan merancang, membuat, dan mengembangkan aplikasi berbasis desktop, web,
-            maupun mobile.
-            Juga belajar desain dan pengembangan gim sebagai salah satu produk kreatif digital.
-          </p>
-          <a href="jurusan.html" class="inline-block text-green-600 font-semibold text-sm hover:underline">
-            Pelajari Lebih Lanjut →
-          </a>
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-bold mb-2">Fasilitas</h3>
+            <p class="text-emerald-200 text-sm sm:text-base">Sarana dan Prasarana Unggulan</p>
+          </div>
+
+          <!-- Fasilitas List -->
+          <div class="space-y-4 sm:space-y-6">
+
+            <!-- Lab IPA -->
+            <div
+              class="flex items-start space-x-3 sm:space-x-4 group p-3 sm:p-4 rounded-xl transition-all duration-300 hover:bg-white/10">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition">
+                <!-- Lucide Flask -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M10 2v6.28a2 2 0 0 1-.59 1.41L4 16a6 6 0 0 0 4.24 10h7.52A6 6 0 0 0 20 16l-5.41-6.31a2 2 0 0 1-.59-1.41V2" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-base sm:text-lg font-semibold mb-1">Laboratorium IPA</h4>
+                <p class="text-emerald-100 text-xs sm:text-sm">Lengkap dengan peralatan modern untuk Fisika, Kimia, dan
+                  Biologi</p>
+              </div>
+            </div>
+
+            <!-- Lab Komputer -->
+            <div
+              class="flex items-start space-x-3 sm:space-x-4 group p-3 sm:p-4 rounded-xl transition-all duration-300 hover:bg-white/10">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition">
+                <!-- Lucide Monitor -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-base sm:text-lg font-semibold mb-1">Lab Komputer</h4>
+                <p class="text-emerald-100 text-xs sm:text-sm">Ruang komputer canggih untuk pembelajaran digital &
+                  pemrograman</p>
+              </div>
+            </div>
+
+            <!-- Perpustakaan -->
+            <div
+              class="flex items-start space-x-3 sm:space-x-4 group p-3 sm:p-4 rounded-xl transition-all duration-300 hover:bg-white/10">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition">
+                <!-- Lucide Book -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-base sm:text-lg font-semibold mb-1">Perpustakaan Modern</h4>
+                <p class="text-emerald-100 text-xs sm:text-sm">Koleksi buku lengkap, ruang baca nyaman, dan sistem digital</p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 
-      <!-- Card MPLB -->
-      <div
-        class="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-200 transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl hover:scale-[1.02]">
-        <div class="relative">
-          <img
-            src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            alt="MPLB" class="h-44 w-full object-cover">
-        </div>
-        <div class="p-6">
-          <h3 class="text-lg font-bold mb-2 text-gray-800">MPLB (Manajemen Perkantoran dan Layanan Bisnis)</h3>
-          <p class="text-gray-600 text-sm mb-4">
-            Fokus pada administrasi perkantoran, layanan bisnis, dan keterampilan komunikasi profesional.
-            Membekali siswa agar siap bekerja di perkantoran modern dengan dukungan teknologi.
-          </p>
-          <a href="jurusan.html" class="inline-block text-green-600 font-semibold text-sm hover:underline">
-            Pelajari Lebih Lanjut →
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Fasilitas Section -->
-  <section id="fasilitas" class="py-20 px-6 bg-gray-50 relative">
-    <div class="max-w-7xl mx-auto">
-      <!-- Title -->
-      <div class="text-center mb-14">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-emerald-700 mb-3">Fasilitas Sekolah</h2>
-        <p class="text-gray-500 text-lg">Sarana & prasarana modern untuk mendukung pembelajaran</p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-
-        <!-- Left Content -->
+      <!-- Right Grid Images -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+        <!-- Image Item -->
         <div
-          class="bg-gradient-to-br from-emerald-600 to-emerald-800 text-white p-10 rounded-2xl shadow-2xl relative overflow-hidden">
-          <div class="absolute -top-10 -right-10 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl"></div>
-          <div class="space-y-8 relative z-10">
-
-            <div>
-              <h3 class="text-3xl font-bold mb-2">Fasilitas</h3>
-              <p class="text-emerald-200">Sarana dan Prasarana Unggulan</p>
-            </div>
-
-            <!-- Item -->
-            <!-- Fasilitas List -->
-            <div class="space-y-6">
-
-              <!-- Lab IPA -->
-              <div
-                class="flex items-start space-x-4 group p-4 rounded-xl transition-all duration-300 hover:bg-white/10">
-                <div
-                  class="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition">
-                  <!-- Lucide Flask -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path
-                      d="M10 2v6.28a2 2 0 0 1-.59 1.41L4 16a6 6 0 0 0 4.24 10h7.52A6 6 0 0 0 20 16l-5.41-6.31a2 2 0 0 1-.59-1.41V2" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="text-lg font-semibold mb-1">Laboratorium IPA</h4>
-                  <p class="text-emerald-100 text-sm">Lengkap dengan peralatan modern untuk Fisika, Kimia, dan Biologi
-                  </p>
-                </div>
-              </div>
-
-              <!-- Lab Komputer -->
-              <div
-                class="flex items-start space-x-4 group p-4 rounded-xl transition-all duration-300 hover:bg-white/10">
-                <div
-                  class="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition">
-                  <!-- Lucide Monitor -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                    <line x1="8" y1="21" x2="16" y2="21" />
-                    <line x1="12" y1="17" x2="12" y2="21" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="text-lg font-semibold mb-1">Lab Komputer</h4>
-                  <p class="text-emerald-100 text-sm">Ruang komputer canggih untuk pembelajaran digital & pemrograman
-                  </p>
-                </div>
-              </div>
-
-              <!-- Perpustakaan -->
-              <div
-                class="flex items-start space-x-4 group p-4 rounded-xl transition-all duration-300 hover:bg-white/10">
-                <div
-                  class="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition">
-                  <!-- Lucide Book -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                    <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="text-lg font-semibold mb-1">Perpustakaan Modern</h4>
-                  <p class="text-emerald-100 text-sm">Koleksi buku lengkap, ruang baca nyaman, dan sistem digital</p>
-                </div>
-              </div>
-
-            </div>
+          class="relative overflow-hidden rounded-xl shadow-lg group aspect-[4/3] hover:shadow-2xl transition-all">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
+          <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=800&q=80"
+            alt="Eksperimen Lab Kimia"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 ease-out">
+          <div class="absolute bottom-3 left-3 z-20">
+            <p class="text-white font-semibold">Lab Kimia</p>
+            <p class="text-white/80 text-xs">Peralatan Modern</p>
           </div>
         </div>
 
-        <!-- Right Grid Images -->
-        <div class="grid grid-cols-2 gap-2">
-          <!-- Image Item -->
-          <div class="relative overflow-hidden rounded-xl shadow-lg group aspect-[4/3] hover:shadow-2xl transition-all">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
-            <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=800&q=80"
-              alt="Eksperimen Lab Kimia"
-              class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 ease-out">
-
-            <div class="absolute bottom-3 left-3 z-20">
-              <p class="text-white font-semibold">Lab Kimia</p>
-              <p class="text-white/80 text-xs">Peralatan Modern</p>
-            </div>
-          </div>
-
-          <div class="relative overflow-hidden rounded-xl shadow-lg group aspect-[4/3] hover:shadow-2xl transition-all">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
-              alt="Workshop"
-              class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 ease-out">
-            <div class="absolute bottom-3 left-3 z-20">
-              <p class="text-white font-semibold">Workshop</p>
-              <p class="text-white/80 text-xs">Praktik Langsung</p>
-            </div>
-          </div>
-
-          <div class="relative overflow-hidden rounded-xl shadow-lg group aspect-[4/3] hover:shadow-2xl transition-all">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
-            <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=1200&q=80"
-              alt="Lab Komputer"
-              class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 ease-out">
-            <div class="absolute bottom-3 left-3 z-20">
-              <p class="text-white font-semibold">Lab Komputer</p>
-              <p class="text-white/80 text-xs">Teknologi Terkini</p>
-            </div>
-          </div>
-
-          <div class="relative overflow-hidden rounded-xl shadow-lg group aspect-[4/3] hover:shadow-2xl transition-all">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
-            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80"
-              alt="Perpustakaan"
-              class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 ease-out">
-            <div class="absolute bottom-3 left-3 z-20">
-              <p class="text-white font-semibold">Perpustakaan</p>
-              <p class="text-white/80 text-xs">Digital Library</p>
-            </div>
+        <div
+          class="relative overflow-hidden rounded-xl shadow-lg group aspect-[4/3] hover:shadow-2xl transition-all">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+            alt="Workshop"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 ease-out">
+          <div class="absolute bottom-3 left-3 z-20">
+            <p class="text-white font-semibold">Workshop</p>
+            <p class="text-white/80 text-xs">Praktik Langsung</p>
           </div>
         </div>
 
+        <div
+          class="relative overflow-hidden rounded-xl shadow-lg group aspect-[4/3] hover:shadow-2xl transition-all">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
+          <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=1200&q=80"
+            alt="Lab Komputer"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 ease-out">
+          <div class="absolute bottom-3 left-3 z-20">
+            <p class="text-white font-semibold">Lab Komputer</p>
+            <p class="text-white/80 text-xs">Teknologi Terkini</p>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-xl shadow-lg group aspect-[4/3] hover:shadow-2xl transition-all">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80"
+            alt="Perpustakaan"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 ease-out">
+          <div class="absolute bottom-3 left-3 z-20">
+            <p class="text-white font-semibold">Perpustakaan</p>
+            <p class="text-white/80 text-xs">Digital Library</p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- News & Events Section -->
-  <section id="berita" class="py-16 px-6 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
+<section id="berita" class="py-16 px-4 sm:px-6 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
 
-      <!-- Header -->
-      <div class="text-center mb-12">
-        <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-          Tentang <span class="text-green-600">Berita & Kegiatan</span>
-        </h2>
-        <p class="text-gray-600 text-lg">Berita & Kegiatan terbaru dari sekolah</p>
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+        Tentang <span class="text-green-600">Berita & Kegiatan</span>
+      </h2>
+      <p class="text-gray-600 text-base sm:text-lg">Berita & Kegiatan terbaru dari sekolah</p>
+    </div>
+
+    <!-- News Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Main News -->
+      <div class="md:col-span-2">
+        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+
+          <!-- Featured Image -->
+          <div class="relative h-48 sm:h-64 md:h-[420px] overflow-hidden group">
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80"
+              alt="Featured news"
+              class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
+          </div>
+
+          <!-- Content -->
+          <div class="p-5 sm:p-8">
+            <!-- Meta Info -->
+            <div class="flex flex-wrap items-center gap-3 mb-4 text-xs sm:text-sm text-gray-500">
+              <span class="bg-green-600 text-white px-3 py-1 rounded-full font-medium text-xs sm:text-sm">
+                Terbaru
+              </span>
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                17 Sep 2025
+              </span>
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+                Admin
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4 leading-tight">
+              Pentingnya Lingkungan Belajar yang Nyaman di Sekolah
+            </h3>
+
+            <!-- Excerpt -->
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+              Sekolah bukan hanya tempat untuk mendapatkan ilmu pengetahuan, tetapi juga ruang tumbuh bagi siswa dalam
+              mengembangkan karakter, keterampilan, dan kreativitas. Lingkungan belajar yang nyaman memiliki peran besar
+              dalam mendukung semua...
+            </p>
+
+            <!-- Read More Button -->
+            <a href="artikel.html">
+              <button
+                class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium transition-all duration-300 flex items-center text-sm sm:text-base">
+                Selengkapnya
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </button>
+            </a>
+          </div>
+        </article>
       </div>
 
-      <!-- News Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-        <!-- Main News (2/3 width) -->
-        <div class="lg:col-span-2">
-          <article
-            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-
-            <!-- Featured Image -->
-            <div class="relative h-64 lg:h-[420px] overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80"
-                alt="Featured news"
-                class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
+      <!-- Sidebar News -->
+      <div class="space-y-4">
+        <!-- Item 1 -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <div class="relative h-28 sm:h-32 overflow-hidden group">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
+              alt="News 1"
+              class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
+          </div>
+          <div class="p-3 sm:p-4">
+            <div class="flex items-center text-[10px] sm:text-xs text-gray-500 mb-1">
+              <span>15 Sep 2025</span>
+              <span class="mx-1">•</span>
+              <span>Admin</span>
             </div>
+            <h5 class="font-semibold text-gray-800 mb-1 leading-tight text-sm">
+              Program Literasi Digital untuk Siswa Kelas X
+            </h5>
+            <p class="text-gray-600 text-xs leading-snug mb-2">
+              Implementasi program baru untuk meningkatkan kemampuan digital siswa...
+            </p>
+            <a href="artikel.html">
+              <button
+                class="bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-300">Selengkapnya</button>
+            </a>
+          </div>
+        </article>
 
-            <!-- Content -->
-            <div class="p-8">
-              <!-- Meta Info -->
-              <div class="flex flex-wrap items-center space-x-4 mb-4 text-sm text-gray-500">
-                <span class="bg-green-600 text-white px-4 py-1 rounded-full font-medium">
-                  Terbaru
-                </span>
-                <span class="flex items-center">
-                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                  </svg>
-                  17 Sep 2025
-                </span>
-                <span class="flex items-center">
-                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                  </svg>
-                  Admin
-                </span>
-              </div>
-
-              <!-- Title -->
-              <h3 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-4 leading-tight">
-                Pentingnya Lingkungan Belajar yang Nyaman di Sekolah
-              </h3>
-
-              <!-- Excerpt -->
-              <p class="text-gray-600 leading-relaxed mb-6">
-                Sekolah bukan hanya tempat untuk mendapatkan ilmu pengetahuan, tetapi juga ruang tumbuh bagi siswa dalam
-                mengembangkan karakter, keterampilan, dan kreativitas. Lingkungan belajar yang nyaman memiliki peran
-                besar dalam mendukung semua...
-              </p>
-
-              <!-- Read More Button -->
-              <a href="artikel.html"> <button
-                  class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center">
-                  Selengkapnya
-                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                    </path>
-                  </svg>
-                </button>
-              </a>
+        <!-- Item 2 -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <div class="relative h-28 sm:h-32 overflow-hidden group">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80"
+              alt="News 2"
+              class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
+          </div>
+          <div class="p-3 sm:p-4">
+            <div class="flex items-center text-[10px] sm:text-xs text-gray-500 mb-1">
+              <span>12 Sep 2025</span>
+              <span class="mx-1">•</span>
+              <span>Admin</span>
             </div>
-          </article>
-        </div>
+            <h5 class="font-semibold text-gray-800 mb-1 leading-tight text-sm">
+              Kompetisi Sains Nasional 2025
+            </h5>
+            <p class="text-gray-600 text-xs leading-snug mb-2">
+              Tim siswa meraih prestasi gemilang dalam kompetisi sains tingkat nasional...
+            </p>
+            <a href="artikel.html">
+              <button
+                class="bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-300">Selengkapnya</button>
+            </a>
+          </div>
+        </article>
 
-        <!-- Sidebar News (1/3 width) -->
-        <div class="space-y-4">
-
-          <!-- News Item -->
-          <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-            <div class="relative h-24 overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
-                alt="News 1" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
+        <!-- Item 3 -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <div class="relative h-28 sm:h-32 overflow-hidden group">
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80"
+              alt="News 3"
+              class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
+          </div>
+          <div class="p-3 sm:p-4">
+            <div class="flex items-center text-[10px] sm:text-xs text-gray-500 mb-1">
+              <span>10 Sep 2025</span>
+              <span class="mx-1">•</span>
+              <span>Admin</span>
             </div>
-            <div class="p-3">
-              <div class="flex items-center text-[10px] text-gray-500 mb-1">
-                <span>15 Sep 2025</span>
-                <span class="mx-1">•</span>
-                <span>Admin</span>
-              </div>
-              <h5 class="font-semibold text-gray-800 mb-1 leading-tight text-xs">
-                Program Literasi Digital untuk Siswa Kelas X
-              </h5>
-              <p class="text-gray-600 text-[11px] leading-snug mb-2">
-                Implementasi program baru untuk meningkatkan kemampuan digital siswa...
-              </p>
-              <a href="artikel.html">
-                <button
-                  class="bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-1.5 rounded-md text-[11px] font-medium transition-all duration-300">Selengkapnya</button>
-              </a>
-            </div>
-          </article>
-
-          <!-- News Item -->
-          <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-            <div class="relative h-24 overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80"
-                alt="News 2" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
-            </div>
-            <div class="p-3">
-              <div class="flex items-center text-[10px] text-gray-500 mb-1">
-                <span>12 Sep 2025</span>
-                <span class="mx-1">•</span>
-                <span>Admin</span>
-              </div>
-              <h5 class="font-semibold text-gray-800 mb-1 leading-tight text-xs">
-                Kompetisi Sains Nasional 2025
-              </h5>
-              <p class="text-gray-600 text-[11px] leading-snug mb-2">
-                Tim siswa meraih prestasi gemilang dalam kompetisi sains tingkat nasional...
-              </p>
-              <a href="artikel.html">
-                <button
-                  class="bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-1.5 rounded-md text-[11px] font-medium transition-all duration-300">Selengkapnya</button>
-              </a>
-            </div>
-          </article>
-
-          <!-- News Item -->
-          <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-            <div class="relative h-24 overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80"
-                alt="News 3" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
-            </div>
-            <div class="p-3">
-              <div class="flex items-center text-[10px] text-gray-500 mb-1">
-                <span>10 Sep 2025</span>
-                <span class="mx-1">•</span>
-                <span>Admin</span>
-              </div>
-              <h5 class="font-semibold text-gray-800 mb-1 leading-tight text-xs">
-                Workshop Pengembangan Karakter Siswa
-              </h5>
-              <p class="text-gray-600 text-[11px] leading-snug mb-2">
-                Kegiatan pengembangan soft skills dan karakter untuk persiapan masa depan...
-              </p>
-              <a href="artikel.html">
-                <button
-                  class="bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-1.5 rounded-md text-[11px] font-medium transition-all duration-300">Selengkapnya</button>
-              </a>
-            </div>
-          </article>
-        </div>
+            <h5 class="font-semibold text-gray-800 mb-1 leading-tight text-sm">
+              Workshop Pengembangan Karakter Siswa
+            </h5>
+            <p class="text-gray-600 text-xs leading-snug mb-2">
+              Kegiatan pengembangan soft skills dan karakter untuk persiapan masa depan...
+            </p>
+            <a href="artikel.html">
+              <button
+                class="bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-300">Selengkapnya</button>
+            </a>
+          </div>
+        </article>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Kontak Section -->
   <section id="kontak"
