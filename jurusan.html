@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Jurusan</title>
+    <link rel="stylesheet" href="css/theme.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -12,368 +13,588 @@
 <body class="bg-gray-50">
 
     <!-- Header -->
-    <header id="navbar"
-        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-sm border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<header id="navbar"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[var(--background)]/95 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
 
-            <!-- Logo -->
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center">
-                    <img src="asset/logo/logo1.PNG" alt="Logo" class="w-18 h-18">
-                </div>
-                <div>
-                    <div class="font-bold text-forest text-lg">SMKN JUARA</div>
-                </div>
-            </div>
+    <!-- Logo -->
+    <div class="flex items-center space-x-2 sm:space-x-3">
+      <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center">
+        <img src="asset/logo/logo1.PNG" alt="Logo" class="w-full h-full object-contain">
+      </div>
+      <div>
+        <div class="font-bold text-base sm:text-lg text-[var(--primary)]">SMKN JUARA</div>
+      </div>
+    </div>
 
-            <!-- Navigation -->
-            <nav class="flex space-x-8 text-gray-700">
-                <a href="index.html #beranda" class="relative group font-medium">
-                    Beranda
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="index.html #tentang-kami" class="relative group font-medium">
-                    Tentang Kami
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="index.html #kompetensi-keahlian" class="relative group font-medium">
-                    Kompetensi Keahlian
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="index.html #fasilitas" class="relative group font-medium">
-                    Fasilitas
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="index.html #berita" class="relative group font-medium">
-                    Berita
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="index.html #kontak" class="relative group font-medium">
-                    Kontak
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-            </nav>
+    <!-- Navigation (desktop) -->
+    <nav class="hidden lg:flex space-x-6 xl:space-x-8 text-[var(--text)]">
+      <a href="index.html #beranda" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Beranda
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="index.html #tentang-kami" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Tentang Kami
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="index.html #kompetensi-keahlian" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Kompetensi Keahlian
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="index.html #fasilitas" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Fasilitas
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="index.html #berita" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Berita
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="index.html #kontak" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Kontak
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </nav>
 
-            <!-- CTA Button -->
-            <button class="px-6 py-3 bg-green-600 text-white rounded-full font-semibold 
-         transition-all duration-300 transform 
-         hover:bg-green-700 hover:shadow-lg hover:scale-105 shadow-md">
-                Hubungi Kami
+    <!-- Right Section: Theme Switcher + CTA + Mobile Menu -->
+    <div class="flex items-center space-x-3 sm:space-x-4">
+      
+      <!-- Theme Switcher (Desktop & Mobile) -->
+      <div class="relative">
+        <button id="theme-btn" 
+                class="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[var(--secondary)]/20 hover:bg-[var(--secondary)]/30 transition-all duration-300 group">
+          <svg class="w-5 h-5 text-[var(--primary)] group-hover:rotate-180 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+          </svg>
+        </button>
+        
+        <!-- Theme Dropdown -->
+        <div id="theme-dropdown" 
+             class="hidden absolute right-0 mt-2 w-48 bg-[var(--background)] rounded-xl shadow-2xl border border-[var(--border)] overflow-hidden">
+          <div class="p-2 bg-[var(--secondary)]/10 border-b border-[var(--border)]">
+            <p class="text-xs font-semibold text-[var(--text)] px-2">Pilih Tema</p>
+          </div>
+          <div class="p-2 space-y-1">
+            <button data-theme="" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Biru</span>
             </button>
+            <button data-theme="theme-red" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Merah</span>
+            </button>
+            <button data-theme="theme-purple" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Ungu</span>
+            </button>
+            <button data-theme="theme-green" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Hijau</span>
+            </button>
+            <button data-theme="theme-yellow" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Kuning</span>
+            </button>
+          </div>
         </div>
-    </header>
+      </div>
+
+      <!-- CTA Button (desktop only) -->
+      <a href="#kontak"
+         class="hidden lg:inline-flex items-center px-4 xl:px-6 py-2 xl:py-3 bg-[var(--primary)] text-white rounded-full font-semibold text-sm xl:text-base transition-all duration-300 transform hover:opacity-90 hover:shadow-lg hover:scale-105 shadow-md">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        Hubungi Kami
+      </a>
+
+      <!-- Hamburger (mobile only) -->
+      <button id="menu-btn" class="lg:hidden flex flex-col space-y-1.5 w-9 h-9 items-center justify-center rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">
+        <span class="w-5 h-0.5 bg-[var(--text)] transition-all duration-300"></span>
+        <span class="w-5 h-0.5 bg-[var(--text)] transition-all duration-300"></span>
+        <span class="w-5 h-0.5 bg-[var(--text)] transition-all duration-300"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-[var(--background)]/98 backdrop-blur-md border-t border-[var(--border)]/50">
+    <nav class="flex flex-col space-y-1 px-4 sm:px-6 py-4 text-[var(--text)]">
+      <a href="index.html #beranda" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Beranda</a>
+      <a href="index.html #tentang-kami" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Tentang Kami</a>
+      <a href="index.html #kompetensi-keahlian" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Kompetensi Keahlian</a>
+      <a href="index.html #fasilitas" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Fasilitas</a>
+      <a href="index.html #berita" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Berita</a>
+      <a href="index.html #kontak" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Kontak</a>
+      <a href="#kontak"
+         class="flex items-center justify-center px-6 py-3 mt-2 bg-[var(--primary)] text-white rounded-full font-semibold transition-all duration-300 transform hover:opacity-90 hover:shadow-lg hover:scale-105 shadow-md">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        Hubungi Kami
+      </a>
+    </nav>
+  </div>
+</header>
 
     <!-- Breadcrumb -->
-    <div class="bg-gray-100 py-3">
-        <div class="container mx-auto px-6">
-            <nav class="text-sm">
-                <a href="#" class="text-gray-500 hover:text-green-600">Beranda</a>
-                <span class="mx-2 text-gray-400">/</span>
-                <a href="#" class="text-gray-500 hover:text-green-600">Jurusan</a>
-                <span class="mx-2 text-gray-400">/</span>
-                <span class="text-gray-700">Agribisnis Tanaman Pangan dan Hortikultura</span>
-            </nav>
+<div class="bg-[var(--bg)] py-3">
+  <div class="container mx-auto px-6">
+    <nav class="text-sm flex flex-wrap items-center gap-1">
+      <a href="#" class="text-[var(--secondary)] hover:text-[var(--primary)] transition-colors">Beranda</a>
+      <span class="mx-2 text-[var(--secondary)]">/</span>
+      <a href="#" class="text-[var(--secondary)] hover:text-[var(--primary)] transition-colors">Jurusan</a>
+      <span class="mx-2 text-[var(--secondary)]">/</span>
+      <span class="text-[var(--text)] font-semibold">PPLG (Pengembangan Perangkat Lunak dan Gim)</span>
+    </nav>
+
+    <!-- Judul Jurusan -->
+    <h1 class="mt-2 text-2xl sm:text-3xl font-black text-[var(--text)]">
+      PPLG (Pengembangan Perangkat Lunak dan Gim)
+    </h1>
+  </div>
+</div>
+
+
+    <!-- Hero Section -->
+<section
+    class="bg-gradient-to-br from-[var(--primary)] via-[var(--secondary)] to-[var(--primary)] text-white py-20 relative overflow-hidden">
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl">
+            <!-- Badge -->
+            <div
+                class="inline-flex items-center bg-[var(--primary)]/30 backdrop-blur-sm border border-[var(--secondary)]/30 text-white px-4 py-2 rounded-full mb-6">
+                <i class="fas fa-laptop-code mr-2"></i>
+                <span class="font-medium">Kompetensi Keahlian</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 drop-shadow-md">
+                Jurusan PPLG
+                <span class="block text-white">Pengembangan Perangkat Lunak & Gim</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl leading-relaxed mb-8 max-w-3xl drop-shadow-sm">
+                Jurusan PPLG membekali siswa dengan kemampuan membangun perangkat lunak, aplikasi, dan gim
+                interaktif. Siswa belajar coding, desain UI/UX, serta pengembangan game dan aplikasi modern.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-8 max-w-3xl drop-shadow-sm">
+                Fokus pada keterampilan pemrograman, manajemen proyek digital, dan kreatifitas dalam membuat solusi
+                teknologi. Lulusan siap bersaing di industri perangkat lunak dan gim profesional.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                <a href="#kurikulum"
+                    class="bg-[var(--secondary)] text-[var(--primary)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--secondary)]/90 transition transform hover:scale-105 inline-flex items-center justify-center">
+                    <i class="fas fa-book-open mr-2"></i>Lihat Kurikulum
+                </a>
+                <a href="#galeri"
+                    class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[var(--primary)] transition transform hover:scale-105 inline-flex items-center justify-center">
+                    <i class="fas fa-images mr-2"></i>Galeri Kegiatan
+                </a>
+            </div>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section
-        class="bg-gradient-to-br from-green-600 via-green-700 to-green-800 text-white py-20 relative overflow-hidden">
-
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl">
-                <!-- Badge -->
-                <div
-                    class="inline-flex items-center bg-green-500 bg-opacity-30 backdrop-blur-sm border border-green-300 border-opacity-30 text-green-100 px-4 py-2 rounded-full mb-6">
-                    <i class="fas fa-certificate mr-2"></i>
-                    <span class="font-medium">Kompetensi Keahlian</span>
-                </div>
-
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
-                    Jurusan Sekolah
-                    <span class="block text-green-200">Pilihan Masa Depan</span>
-                </h1>
-
-                <p class="text-xl md:text-2xl text-green-100 leading-relaxed mb-8 max-w-3xl">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla, nunc nec interdum
-                    pellentesque, justo risus dignissim velit, non condimentum urna lectus id metus. Suspendisse at
-                    venenatis ligula.
-                </p>
-
-                <p class="text-lg text-green-200 leading-relaxed mb-8 max-w-3xl">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sapien turpis. Proin dignissim,
-                    neque ac aliquam finibus, turpis lacus malesuada ligula, a volutpat sem orci in metus. Sed at sapien
-                    eget sapien feugiat varius.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 mt-8">
-                    <a href="#kurikulum"
-                        class="bg-white text-green-700 px-8 py-4 rounded-full font-semibold hover:bg-green-50 transition transform hover:scale-105 inline-flex items-center justify-center">
-                        <i class="fas fa-book-open mr-2"></i>Lihat Kurikulum
-                    </a>
-                    <a href="#galeri"
-                        class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-green-700 transition transform hover:scale-105 inline-flex items-center justify-center">
-                        <i class="fas fa-images mr-2"></i>Galeri Kegiatan
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
+</section>
 
     <!-- Main Content -->
-    <main class="py-16">
-        <div class="container mx-auto px-6">
+<main class="py-16">
+    <div class="container mx-auto px-6">
 
-            <!-- Program Overview -->
-            <section class="mb-16">
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-                    <div class="grid lg:grid-cols-2 gap-0">
-                        <!-- Image -->
-                        <div class="relative h-80 lg:h-auto">
-                            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Sample Image" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-green-900 bg-opacity-30"></div>
+        <!-- Program Overview -->
+        <section class="mb-16">
+            <div class="bg-[var(--bg)] rounded-2xl shadow-xl overflow-hidden">
+                <div class="grid lg:grid-cols-2 gap-0">
+                    <!-- Image -->
+                    <div class="relative h-80 lg:h-auto">
+                        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Belajar Coding" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-[var(--primary)]/30"></div>
+                    </div>
+                    <!-- Content -->
+                    <div class="p-8 lg:p-12">
+                        <div class="mb-6">
+                            <span
+                                class="inline-flex items-center bg-[var(--primary)]/20 text-[var(--primary)] px-3 py-1 rounded-full text-sm font-medium">
+                                Program Unggulan
+                            </span>
                         </div>
-                        <!-- Content -->
-                        <div class="p-8 lg:p-12">
-                            <div class="mb-6">
-                                <span
-                                    class="inline-flex items-center bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                                    Program Unggulan
-                                </span>
-                            </div>
-                            <h2 class="text-3xl font-bold text-gray-800 mb-6">
-                                Program Pembelajaran Terpadu
-                            </h2>
-                            <p class="text-gray-600 leading-relaxed mb-6">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo, sapien vel
-                                congue dictum, metus nunc tristique odio, non varius lorem purus id lacus.
-                            </p>
-                            <div class="space-y-4">
-                                <div class="flex items-start space-x-3">
-                                    <div class="bg-green-100 text-green-600 p-1 rounded-lg mt-1 flex-shrink-0">
-                                        <i class="fas fa-check text-sm"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800">Lorem Ipsum</h4>
-                                        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit.</p>
-                                    </div>
+                        <h2 class="text-3xl font-bold text-[var(--text)] mb-6">
+                            Program Pembelajaran Terpadu PPLG
+                        </h2>
+                        <p class="text-[var(--text)] leading-relaxed mb-6">
+                            Jurusan PPLG membekali siswa dengan kemampuan membangun perangkat lunak, aplikasi, dan gim
+                            interaktif. Siswa belajar coding, desain UI/UX, serta pengembangan game dan aplikasi modern.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-[var(--primary)]/20 text-[var(--primary)] p-1 rounded-lg mt-1 flex-shrink-0">
+                                    <i class="fas fa-check text-sm"></i>
                                 </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="bg-green-100 text-green-600 p-1 rounded-lg mt-1 flex-shrink-0">
-                                        <i class="fas fa-check text-sm"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800">Dolor Sit</h4>
-                                        <p class="text-gray-600 text-sm">Sed do eiusmod tempor incididunt ut labore et
-                                            dolore magna aliqua.</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="bg-green-100 text-green-600 p-1 rounded-lg mt-1 flex-shrink-0">
-                                        <i class="fas fa-check text-sm"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800">Consectetur Adipiscing</h4>
-                                        <p class="text-gray-600 text-sm">Ut enim ad minim veniam, quis nostrud
-                                            exercitation ullamco laboris.</p>
-                                    </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)]">Pemrograman & Algoritma</h4>
+                                    <p class="text-[var(--text)] text-sm">Siswa mempelajari logika pemrograman dan
+                                        algoritma untuk membangun software yang efisien.</p>
                                 </div>
                             </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-[var(--primary)]/20 text-[var(--primary)] p-1 rounded-lg mt-1 flex-shrink-0">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)]">Pengembangan Gim</h4>
+                                    <p class="text-[var(--text)] text-sm">Siswa belajar merancang dan membuat gim
+                                        interaktif menggunakan engine populer.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-[var(--primary)]/20 text-[var(--primary)] p-1 rounded-lg mt-1 flex-shrink-0">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)]">UI/UX & Desain Aplikasi</h4>
+                                    <p class="text-[var(--text)] text-sm">Mengasah kemampuan desain antarmuka dan
+                                        pengalaman pengguna agar software lebih menarik dan mudah digunakan.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Gallery Section -->
-            <section id="galeri" class="mb-16">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Galeri Kegiatan</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">
-                        Dokumentasi kegiatan pembelajaran siswa jurusan PPLG dan MPLB
-                    </p>
-                </div>
+        <!-- Gallery Section -->
+        <section id="galeri" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-[var(--text)] mb-4">Galeri Kegiatan</h2>
+                <p class="text-[var(--text)] max-w-2xl mx-auto">
+                    Dokumentasi kegiatan pembelajaran siswa jurusan PPLG
+                </p>
+            </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <!-- PPLG - Coding -->
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="Belajar Pemrograman"
-                            class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition duration-300 flex items-end">
-                            <p class="text-white p-4 font-medium">Belajar Pemrograman</p>
-                        </div>
-                    </div>
-
-                    <!-- PPLG - Game Dev -->
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="Pengembangan Game"
-                            class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition duration-300 flex items-end">
-                            <p class="text-white p-4 font-medium">Pengembangan Game</p>
-                        </div>
-                    </div>
-
-                    <!-- MPLB - Administrasi -->
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="Administrasi Kantor"
-                            class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition duration-300 flex items-end">
-                            <p class="text-white p-4 font-medium">Administrasi Kantor</p>
-                        </div>
-                    </div>
-
-                    <!-- MPLB - Layanan Bisnis -->
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="Layanan Bisnis"
-                            class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition duration-300 flex items-end">
-                            <p class="text-white p-4 font-medium">Layanan Bisnis</p>
-                        </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- PPLG - Coding -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Belajar Pemrograman"
+                        class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+                    <div
+                        class="absolute inset-0 bg-[var(--primary)]/40 group-hover:bg-[var(--primary)]/20 transition duration-300 flex items-end">
+                        <p class="text-white p-4 font-medium">Belajar Pemrograman</p>
                     </div>
                 </div>
-            </section>
 
+                <!-- PPLG - Game Dev -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Pengembangan Game"
+                        class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+                    <div
+                        class="absolute inset-0 bg-[var(--primary)]/40 group-hover:bg-[var(--primary)]/20 transition duration-300 flex items-end">
+                        <p class="text-white p-4 font-medium">Pengembangan Game</p>
+                    </div>
+                </div>
 
-        </div>
-    </main>
+                <!-- PPLG - UI/UX -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Desain UI/UX"
+                        class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+                    <div
+                        class="absolute inset-0 bg-[var(--primary)]/40 group-hover:bg-[var(--primary)]/20 transition duration-300 flex items-end">
+                        <p class="text-white p-4 font-medium">Desain UI/UX</p>
+                    </div>
+                </div>
+
+                <!-- PPLG - Proyek Software -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Proyek Software"
+                        class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+                    <div
+                        class="absolute inset-0 bg-[var(--primary)]/40 group-hover:bg-[var(--primary)]/20 transition duration-300 flex items-end">
+                        <p class="text-white p-4 font-medium">Proyek Software</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
 
     <!-- CTA Section -->
-    <section class="bg-gradient-to-br from-green-600 via-green-700 to-green-800 text-white py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                Bergabunglah dengan Program Kami
+<section class="relative py-20 overflow-hidden" style="background: linear-gradient(to bottom right, var(--primary), var(--secondary));">
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 pointer-events-none opacity-10">
+        <div class="absolute top-10 left-10 w-64 h-64 rounded-full blur-3xl bg-white"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 rounded-full blur-3xl bg-white"></div>
+    </div>
+
+    <div class="container mx-auto px-6 text-center relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <!-- Badge -->
+            <div class="inline-block mb-6">
+                <span class="px-4 py-2 rounded-full text-sm font-semibold bg-white/20 backdrop-blur-sm text-white border-2 border-white/30">
+                    Bergabunglah Sekarang
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white leading-tight">
+                Gabung dengan Jurusan <span class="relative inline-block">
+                    PPLG
+                    <div class="absolute -bottom-2 left-0 w-full h-1 bg-white rounded-full"></div>
+                </span>
             </h2>
-            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                Wujudkan mimpi menjadi orang sukses
+
+            <!-- Description -->
+            <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto leading-relaxed">
+                Pelajari coding, desain aplikasi, dan pengembangan gim interaktif sekarang!
             </p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="#"
-                    class="bg-white text-green-700 px-8 py-4 rounded-full font-semibold hover:bg-green-50 transition transform hover:scale-105 inline-flex items-center justify-center">
-                    <i class="fas fa-user-plus mr-2"></i>Daftar Sekarang
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+                <a href="#daftar"
+                    class="bg-white text-[var(--primary)] px-8 py-4 rounded-full font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center group">
+                    <svg class="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                    </svg>
+                    Daftar Sekarang
                 </a>
-                <a href="#"
-                    class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-green-700 transition transform hover:scale-105 inline-flex items-center justify-center">
-                    <i class="fas fa-info-circle mr-2"></i>Info Lebih Lanjut
+                <a href="#info"
+                    class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[var(--primary)] transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center group">
+                    <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Info Lebih Lanjut
                 </a>
             </div>
-        </div>
-    </section>
 
-    <footer class="relative overflow-hidden bg-gradient-to-br from-emerald-900 to-emerald-950 text-gray-300">
-        <div class="relative max-w-7xl mx-auto px-6 pt-20 pb-12">
-
-            <!-- Main Footer Content -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-
-                <!-- School Info -->
-                <div class="lg:col-span-2 space-y-6">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <!-- School Logo -->
-                        <div
-                            class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
-                            <img src="asset/logo/logo1.PNG" alt="logo">
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white">SMK Juara</h3>
-                            <p class="text-emerald-300 text-sm">Excellence in Education</p>
-                        </div>
-                    </div>
-
-                    <p class="text-gray-300 leading-relaxed max-w-md">
-                        Membangun generasi unggul melalui pendidikan berkualitas dengan teknologi terdepan dan
-                        pembelajaran yang inovatif untuk masa depan yang cerah.
-                    </p>
-
+            <!-- Additional Info -->
+            <div class="mt-12 flex flex-wrap justify-center gap-8 text-white/90">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-sm font-medium">Fasilitas Lengkap</span>
                 </div>
-
-                <!-- Quick Links -->
-                <div class="space-y-6">
-                    <h4 class="text-xl font-bold text-white flex items-center">
-                        <div class="w-1 h-6 bg-gradient-to-b from-emerald-400 to-green-600 rounded-full mr-3"></div>
-                        Menu Utama
-                    </h4>
-                    <ul class="space-y-4">
-                        <li><a href="index.html #beranda"
-                                class="text-gray-300 hover:text-emerald-400 transition">Beranda</a></li>
-                        <li><a href="index.html #tentangg-kami"
-                                class="text-gray-300 hover:text-emerald-400 transition">Tentang Kami</a></li>
-                        <li><a href="index.html #kompetensi-keahlian"
-                                class="text-gray-300 hover:text-emerald-400 transition">Kompetensi Keahlian</a></li>
-                        <li><a href="index.html #fasilitas"
-                                class="text-gray-300 hover:text-emerald-400 transition">Fasilitas</a></li>
-                        <li><a href="index.html #berita"
-                                class="text-gray-300 hover:text-emerald-400 transition">Berita</a></li>
-                    </ul>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                    <span class="text-sm font-medium">Instruktur Berpengalaman</span>
                 </div>
-
-                <!-- Contact Info -->
-                <div class="space-y-6">
-                    <h4 class="text-xl font-bold text-white flex items-center">
-                        <div class="w-1 h-6 bg-gradient-to-b from-emerald-400 to-green-600 rounded-full mr-3"></div>
-                        Hubungi Kami
-                    </h4>
-                    <div class="space-y-4">
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            Jl. Pendidikan No. 45<br>
-                            Bandung, Jawa Barat
-                        </p>
-                        <p class="text-gray-300">+62 812-3456-7890</p>
-                        <p class="text-gray-300">info@smkjuara.sch.id</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social Media & Newsletter -->
-            <div
-                class="border-t border-white/10 pt-8 mb-8 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
-
-                <!-- Social Media -->
-                <div class="flex items-center space-x-6">
-                    <h5 class="text-white font-semibold">Follow Us:</h5>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition">Facebook</a>
-                        <a href="#" class="text-gray-400 hover:text-blue-500 transition">Twitter</a>
-                        <a href="#" class="text-gray-400 hover:text-pink-400 transition">Instagram</a>
-                        <a href="#" class="text-gray-400 hover:text-red-400 transition">YouTube</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Copyright -->
-            <div
-                class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <div class="text-gray-400 text-sm">
-                    © 2025 SMK Juara. All rights reserved. Made with
-                    <span class="text-red-400"></span>
-                    for education.
-                </div>
-                <div class="flex space-x-6 text-sm">
-                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">Terms of Service</a>
-                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">Sitemap</a>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span class="text-sm font-medium">Peluang Karir</span>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 
+    <!-- Bottom Wave -->
+    <div class="absolute bottom-0 left-0 w-full">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" style="color: var(--background);">
+            <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="currentColor"/>
+        </svg>
+    </div>
+</section>
+
+ <footer class="relative overflow-hidden text-white"
+        style="background: linear-gradient(to bottom right, #0b2e1f, #111111);">
+  <div class="relative max-w-7xl mx-auto px-6 pt-20 pb-12">
+
+    <!-- Main Footer Content -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+      <!-- School Info -->
+      <div class="lg:col-span-2 space-y-6">
+        <div class="flex items-center space-x-3 mb-6">
+          <!-- School Logo -->
+          <div class="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg"
+               style="background: linear-gradient(to bottom right, var(--primary), #0b2e1f);">
+            <img src="asset/logo/logo1.PNG" alt="logo" class="rounded-lg">
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">SMK Juara</h3>
+            <p class="text-sm text-[var(--primary)]">Excellence in Education</p>
+          </div>
+        </div>
+
+        <p class="leading-relaxed max-w-md text-white/80">
+          Membangun generasi unggul melalui pendidikan berkualitas dengan teknologi terdepan dan pembelajaran yang
+          inovatif untuk masa depan yang cerah.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-6">
+        <h4 class="text-xl font-bold text-white flex items-center">
+          <div class="w-1 h-6 rounded-full mr-3"
+               style="background: linear-gradient(to bottom, var(--primary), #0b2e1f);"></div>
+          Menu Utama
+        </h4>
+        <ul class="space-y-4">
+          <li><a href="index.html #beranda" class="transition hover:text-[var(--primary)] text-white">Beranda</a></li>
+          <li><a href="index.html #tentang-kami" class="transition hover:text-[var(--primary)] text-white">Tentang Kami</a></li>
+          <li><a href="index.html #kompetensi-keahlian" class="transition hover:text-[var(--primary)] text-white">Kompetensi Keahlian</a></li>
+          <li><a href="index.html #fasilitas" class="transition hover:text-[var(--primary)] text-white">Fasilitas</a></li>
+          <li><a href="index.html #berita" class="transition hover:text-[var(--primary)] text-white">Berita</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <h4 class="text-xl font-bold text-white flex items-center">
+          <div class="w-1 h-6 rounded-full mr-3"
+               style="background: linear-gradient(to bottom, var(--primary), #0b2e1f);"></div>
+          Hubungi Kami
+        </h4>
+        <div class="space-y-4">
+          <p class="text-sm leading-relaxed text-white">
+            Jl. Pendidikan No. 45<br>
+            Bandung, Jawa Barat
+          </p>
+          <p class="text-white">+62 812-3456-7890</p>
+          <p class="text-white">info@smkjuara.sch.id</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="border-t pt-8 mb-8 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0"
+         style="border-color: rgba(255,255,255,0.1);">
+      <div class="flex items-center space-x-6">
+        <h5 class="font-semibold text-white">Follow Us:</h5>
+        <div class="flex space-x-4">
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">Facebook</a>
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">Twitter</a>
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">Instagram</a>
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="border-t pt-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+         style="border-color: rgba(255,255,255,0.1);">
+      <div class="text-sm text-white/70">
+        © 2025 SMK Juara. All rights reserved. Made with
+        <span class="text-[var(--primary)]">♥</span>
+        for education.
+      </div>
+      <div class="flex space-x-6 text-sm">
+        <a href="#" class="transition hover:text-[var(--primary)] text-white">Privacy Policy</a>
+        <a href="#" class="transition hover:text-[var(--primary)] text-white">Terms of Service</a>
+        <a href="#" class="transition hover:text-[var(--primary)] text-white">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script>
+// Mobile Menu Toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+  const spans = menuBtn.querySelectorAll('span');
+  if (!mobileMenu.classList.contains('hidden')) {
+    spans[0].style.transform = 'rotate(45deg) translateY(7px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translateY(-7px)';
+  } else {
+    spans[0].style.transform = 'none';
+    spans[1].style.opacity = '1';
+    spans[2].style.transform = 'none';
+  }
+});
+
+// Theme Switcher Dropdown
+const themeBtn = document.getElementById('theme-btn');
+const themeDropdown = document.getElementById('theme-dropdown');
+const themeOptions = document.querySelectorAll('.theme-option');
+
+themeBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  themeDropdown.classList.toggle('hidden');
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (!themeBtn.contains(e.target) && !themeDropdown.contains(e.target)) {
+    themeDropdown.classList.add('hidden');
+  }
+});
+
+// Theme switching logic
+themeOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    const theme = option.getAttribute('data-theme');
+    document.documentElement.className = theme;
+    localStorage.setItem('theme', theme);
+    themeDropdown.classList.add('hidden');
+    
+    // Add visual feedback
+    themeOptions.forEach(opt => opt.classList.remove('bg-[var(--secondary)]/30'));
+    option.classList.add('bg-[var(--secondary)]/30');
+  });
+});
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.documentElement.className = savedTheme;
+  themeOptions.forEach(option => {
+    if (option.getAttribute('data-theme') === savedTheme) {
+      option.classList.add('bg-[var(--secondary)]/30');
+    }
+  });
+}
+
+// Close mobile menu when clicking nav links
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    const spans = menuBtn.querySelectorAll('span');
+    spans[0].style.transform = 'none';
+    spans[1].style.opacity = '1';
+    spans[2].style.transform = 'none';
+  });
+});
+
+// Navbar scroll effect
+let lastScroll = 0;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll > 100) {
+    navbar.classList.add('shadow-md');
+  } else {
+    navbar.classList.remove('shadow-md');
+  }
+  
+  lastScroll = currentScroll;
+});
+</script>
+<script src="js/theme.js"></script>
 </body>
 
 </html>

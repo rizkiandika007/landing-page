@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siswa SMK N 1 Rancabali Mengikuti Apel Pagi Pasca Libur Idul Fitri - SMK Digital</title>
+    <title>Artikel</title>
+    <link rel="stylesheet" href="css/theme.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -23,296 +24,558 @@
 <body class="bg-gray-50">
 
     <!-- Header -->
-    <header id="navbar"
-        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-sm border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<header id="navbar"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[var(--background)]/95 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
 
-            <!-- Logo -->
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center">
-                    <img src="asset/logo/logo1.PNG" alt="Logo" class="w-18 h-18">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2 sm:space-x-3">
+      <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center">
+        <img src="asset/logo/logo1.PNG" alt="Logo" class="w-full h-full object-contain">
+      </div>
+      <div>
+        <div class="font-bold text-base sm:text-lg text-[var(--primary)]">SMKN JUARA</div>
+      </div>
+    </div>
+
+    <!-- Navigation (desktop) -->
+    <nav class="hidden lg:flex space-x-6 xl:space-x-8 text-[var(--text)]">
+      <a href="index.html #beranda" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Beranda
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="index.html #tentang-kami" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Tentang Kami
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="index.html #kompetensi-keahlian" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Kompetensi Keahlian
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="index.html #fasilitas" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Fasilitas
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="index.html #berita" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Berita
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="index.html #kontak" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Kontak
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </nav>
+
+    <!-- Right Section: Theme Switcher + CTA + Mobile Menu -->
+    <div class="flex items-center space-x-3 sm:space-x-4">
+      
+      <!-- Theme Switcher (Desktop & Mobile) -->
+      <div class="relative">
+        <button id="theme-btn" 
+                class="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[var(--secondary)]/20 hover:bg-[var(--secondary)]/30 transition-all duration-300 group">
+          <svg class="w-5 h-5 text-[var(--primary)] group-hover:rotate-180 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+          </svg>
+        </button>
+        
+        <!-- Theme Dropdown -->
+        <div id="theme-dropdown" 
+             class="hidden absolute right-0 mt-2 w-48 bg-[var(--background)] rounded-xl shadow-2xl border border-[var(--border)] overflow-hidden">
+          <div class="p-2 bg-[var(--secondary)]/10 border-b border-[var(--border)]">
+            <p class="text-xs font-semibold text-[var(--text)] px-2">Pilih Tema</p>
+          </div>
+          <div class="p-2 space-y-1">
+            <button data-theme="" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Biru</span>
+            </button>
+            <button data-theme="theme-red" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Merah</span>
+            </button>
+            <button data-theme="theme-purple" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Ungu</span>
+            </button>
+            <button data-theme="theme-green" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Hijau</span>
+            </button>
+            <button data-theme="theme-yellow" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Kuning</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Button (desktop only) -->
+      <a href="#kontak"
+         class="hidden lg:inline-flex items-center px-4 xl:px-6 py-2 xl:py-3 bg-[var(--primary)] text-white rounded-full font-semibold text-sm xl:text-base transition-all duration-300 transform hover:opacity-90 hover:shadow-lg hover:scale-105 shadow-md">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        Hubungi Kami
+      </a>
+
+      <!-- Hamburger (mobile only) -->
+      <button id="menu-btn" class="lg:hidden flex flex-col space-y-1.5 w-9 h-9 items-center justify-center rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">
+        <span class="w-5 h-0.5 bg-[var(--text)] transition-all duration-300"></span>
+        <span class="w-5 h-0.5 bg-[var(--text)] transition-all duration-300"></span>
+        <span class="w-5 h-0.5 bg-[var(--text)] transition-all duration-300"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-[var(--background)]/98 backdrop-blur-md border-t border-[var(--border)]/50">
+    <nav class="flex flex-col space-y-1 px-4 sm:px-6 py-4 text-[var(--text)]">
+      <a href="index.html #beranda" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Beranda</a>
+      <a href="index.html #tentang-kami" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Tentang Kami</a>
+      <a href="index.html #kompetensi-keahlian" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Kompetensi Keahlian</a>
+      <a href="index.html #fasilitas" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Fasilitas</a>
+      <a href="index.html #berita" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Berita</a>
+      <a href="index.html #kontak" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Kontak</a>
+      <a href="#kontak"
+         class="flex items-center justify-center px-6 py-3 mt-2 bg-[var(--primary)] text-white rounded-full font-semibold transition-all duration-300 transform hover:opacity-90 hover:shadow-lg hover:scale-105 shadow-md">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        Hubungi Kami
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="py-3" style="background: rgba(72, 187, 120, 0.15);">
+    <div class="container mx-auto px-6">
+        <nav class="text-sm flex items-center">
+            <a href="#" class="hover:text-[var(--primary)] transition-colors" style="color: var(--text);">Beranda</a>
+            <span class="mx-2" style="color: var(--text); opacity: 0.4;">/</span>
+            <a href="#" class="hover:text-[var(--primary)] transition-colors" style="color: var(--text);">Berita</a>
+            <span class="mx-2" style="color: var(--text); opacity: 0.4;">/</span>
+            <span style="color: var(--text); font-weight: 600;">Pentingnya Lingkungan Belajar</span>
+        </nav>
+    </div>
+</div>
+
+<div class="container mx-auto px-6 py-8" style="background: var(--background);">
+    <div class="grid lg:grid-cols-4 gap-8">
+
+        <!-- Main Article Content -->
+        <article class="lg:col-span-3">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-2" style="border: 2px solid rgba(72, 187, 120, 0.2);">
+
+                <!-- Article Header -->
+                <div class="p-6 sm:p-8 border-b" style="border-bottom: 2px solid rgba(72, 187, 120, 0.15);">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm" 
+                              style="background: rgba(72, 187, 120, 0.2); color: var(--primary);">
+                            <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            17 September 2025
+                        </span>
+                        <span class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm" 
+                              style="background: rgba(72, 187, 120, 0.2); color: var(--primary);">
+                            <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                            Admin
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl lg:text-4xl font-black leading-tight mb-4" style="color: var(--text);">
+                        <span class="bg-gradient-to-r bg-clip-text text-transparent" 
+                              style="background-image: linear-gradient(to right, var(--primary), var(--secondary));">
+                            Pentingnya Lingkungan Belajar yang Nyaman di Sekolah
+                        </span>
+                    </h1>
+
+                    <p class="text-lg leading-relaxed" style="color: var(--text);">
+                        Sekolah bukan hanya tempat untuk mendapatkan ilmu pengetahuan, tetapi juga ruang tumbuh bagi siswa untuk mengembangkan potensi diri secara optimal.
+                    </p>
                 </div>
-                <div>
-                    <div class="font-bold text-forest text-lg">SMKN JUARA</div>
+
+                <!-- Article Content -->
+                <div class="article-content p-6 sm:p-8">
+                    <figure class="mb-8 rounded-2xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80"
+                            alt="Lingkungan Belajar" class="w-full h-64 md:h-96 object-cover">
+                        <figcaption class="text-sm text-center italic p-3" 
+                                    style="color: var(--text); background: rgba(72, 187, 120, 0.08);">
+                            Suasana lingkungan belajar yang nyaman dan kondusif di SMKN Juara
+                        </figcaption>
+                    </figure>
+
+                    <div class="prose max-w-none space-y-6">
+                        <p class="leading-relaxed text-base" style="color: var(--text);">
+                            Lingkungan belajar yang nyaman merupakan salah satu faktor kunci dalam menciptakan proses pembelajaran yang efektif. Di SMKN Juara, kami memahami betapa pentingnya menciptakan suasana yang mendukung siswa untuk belajar dengan maksimal. Lingkungan yang kondusif tidak hanya tentang fasilitas fisik yang memadai, tetapi juga atmosfer psikologis yang positif.
+                        </p>
+
+                        <h2 class="text-2xl font-bold mt-8 mb-4" style="color: var(--primary);">
+                            Faktor-Faktor Lingkungan Belajar yang Nyaman
+                        </h2>
+
+                        <p class="leading-relaxed text-base" style="color: var(--text);">
+                            <strong style="color: var(--primary); font-weight: 700;">1. Ruang Kelas yang Ergonomis</strong><br>
+                            Ruang kelas yang dirancang dengan baik memperhatikan aspek pencahayaan, sirkulasi udara, dan penataan furniture yang ergonomis. Hal ini membantu siswa tetap fokus dan nyaman selama proses pembelajaran berlangsung.
+                        </p>
+
+                        <p class="leading-relaxed text-base" style="color: var(--text);">
+                            <strong style="color: var(--primary); font-weight: 700;">2. Teknologi Pembelajaran Modern</strong><br>
+                            Integrasi teknologi dalam pembelajaran membuat proses belajar mengajar menjadi lebih interaktif dan menarik. Penggunaan proyektor, komputer, dan akses internet membantu siswa mengakses informasi dengan lebih mudah.
+                        </p>
+
+                        <div class="p-6 rounded-2xl my-8 border-l-4 shadow-md" 
+                             style="background: rgba(72, 187, 120, 0.1); border-color: var(--primary);">
+                            <p class="text-lg font-semibold italic" style="color: var(--primary);">
+                                "Lingkungan belajar yang positif tidak hanya meningkatkan prestasi akademik, tetapi juga membentuk karakter dan kepribadian siswa yang lebih baik."
+                            </p>
+                        </div>
+
+                        <p class="leading-relaxed text-base" style="color: var(--text);">
+                            <strong style="color: var(--primary); font-weight: 700;">3. Suasana Psikologis yang Mendukung</strong><br>
+                            Hubungan yang harmonis antara guru dan siswa, serta antar siswa menciptakan atmosfer belajar yang positif. Ketika siswa merasa aman dan dihargai, mereka akan lebih berani mengekspresikan ide dan bertanya tanpa takut dihakimi.
+                        </p>
+
+                        <h2 class="text-2xl font-bold mt-8 mb-4" style="color: var(--primary);">
+                            Dampak Lingkungan Belajar yang Nyaman
+                        </h2>
+
+                        <p class="leading-relaxed text-base" style="color: var(--text);">
+                            Penelitian menunjukkan bahwa lingkungan belajar yang nyaman berdampak signifikan terhadap motivasi dan prestasi siswa. Siswa yang belajar di lingkungan yang kondusif cenderung memiliki tingkat kehadiran yang lebih tinggi, partisipasi aktif dalam kelas, dan pencapaian akademik yang lebih baik.
+                        </p>
+
+                        <p class="leading-relaxed text-base" style="color: var(--text);">
+                            Di SMKN Juara, kami berkomitmen untuk terus meningkatkan kualitas lingkungan belajar. Mulai dari renovasi ruang kelas, penambahan fasilitas perpustakaan modern, hingga penyediaan area rekreasi yang mendukung kesejahteraan siswa secara holistik.
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-4 my-8">
+                            <div class="p-5 rounded-xl border-2 hover:shadow-lg transition-all duration-300" 
+                                 style="border: 2px solid rgba(72, 187, 120, 0.3);">
+                                <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-3"
+                                     style="background: rgba(72, 187, 120, 0.3); color: var(--primary);">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold mb-2" style="color: var(--text);">Meningkatkan Fokus</h3>
+                                <p class="text-sm" style="color: var(--text);">Lingkungan yang nyaman membantu siswa lebih fokus dalam belajar</p>
+                            </div>
+                            <div class="p-5 rounded-xl border-2 hover:shadow-lg transition-all duration-300" 
+                                 style="border: 2px solid rgba(72, 187, 120, 0.3);">
+                                <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-3"
+                                     style="background: rgba(72, 187, 120, 0.3); color: var(--primary);">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold mb-2" style="color: var(--text);">Prestasi Meningkat</h3>
+                                <p class="text-sm" style="color: var(--text);">Suasana kondusif mendorong pencapaian akademik lebih baik</p>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mt-8 mb-4" style="color: var(--primary);">
+                            Kesimpulan
+                        </h2>
+
+                        <p class="leading-relaxed text-base" style="color: var(--text);">
+                            Menciptakan lingkungan belajar yang nyaman adalah investasi jangka panjang untuk masa depan pendidikan. Dengan lingkungan yang mendukung, siswa tidak hanya memperoleh pengetahuan, tetapi juga mengembangkan karakter, kreativitas, dan keterampilan sosial yang akan berguna sepanjang hidup mereka. Mari bersama-sama kita wujudkan lingkungan belajar yang lebih baik untuk generasi penerus bangsa.
+                        </p>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="border-t pt-6 mt-8" style="border-top: 2px solid rgba(72, 187, 120, 0.2);">
+                        <div class="mb-3">
+                            <h5 class="text-sm font-semibold mb-3" style="color: var(--text);">Tags:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 rounded-full text-xs font-medium border-2 hover:shadow-md transition-all duration-300" 
+                                      style="background: rgba(72, 187, 120, 0.15); color: var(--primary); border: 2px solid var(--primary);">
+                                    #Pendidikan
+                                </span>
+                                <span class="px-4 py-2 rounded-full text-xs font-medium border-2 hover:shadow-md transition-all duration-300" 
+                                      style="background: rgba(72, 187, 120, 0.15); color: var(--primary); border: 2px solid var(--primary);">
+                                    #LingkunganBelajar
+                                </span>
+                                <span class="px-4 py-2 rounded-full text-xs font-medium border-2 hover:shadow-md transition-all duration-300" 
+                                      style="background: rgba(72, 187, 120, 0.15); color: var(--primary); border: 2px solid var(--primary);">
+                                    #SMKNJuara
+                                </span>
+                                <span class="px-4 py-2 rounded-full text-xs font-medium border-2 hover:shadow-md transition-all duration-300" 
+                                      style="background: rgba(72, 187, 120, 0.15); color: var(--primary); border: 2px solid var(--primary);">
+                                    #FasilitasSekolah
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </article>
 
-            <!-- Navigation -->
-            <nav class="flex space-x-8 text-gray-700">
-                <a href="index.html #beranda" class="relative group font-medium">
-                    Beranda
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="index.html #tentang-kami" class="relative group font-medium">
-                    Tentang Kami
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="index.html #kompetensi-keahlian" class="relative group font-medium">
-                    Kompetensi Keahlian
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="index.html #fasilitas" class="relative group font-medium">
-                    Fasilitas
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="index.html #berita" class="relative group font-medium">
-                    Berita
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="index.html #kontak" class="relative group font-medium">
-                    Kontak
-                    <span
-                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-            </nav>
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1">
+            <div class="space-y-6">
 
-            <!-- CTA Button -->
-            <button class="px-6 py-3 bg-green-600 text-white rounded-full font-semibold 
-         transition-all duration-300 transform 
-         hover:bg-green-700 hover:shadow-lg hover:scale-105 shadow-md">
-                Hubungi Kami
-            </button>
-
-        </div>
-    </header>
-
-    <!-- Breadcrumb -->
-    <div class="bg-gray-100 py-3">
-        <div class="container mx-auto px-6">
-            <nav class="text-sm">
-                <a href="#" class="text-gray-500 hover:text-green-600">Beranda</a>
-                <span class="mx-2 text-gray-400">/</span>
-                <a href="#" class="text-gray-500 hover:text-green-600">Berita</a>
-                <span class="mx-2 text-gray-400">/</span>
-                <span class="text-gray-700">Kegiatan Sekolah</span>
-            </nav>
-        </div>
-    </div>
-
-    <div class="container mx-auto px-6 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-
-                    <!-- Article Header -->
-                    <div class="p-6 border-b border-gray-200">
-                        <div class="flex items-center space-x-2 mb-3">
-                            <span class="text-gray-400 text-xs">•</span>
-                            <span class="text-gray-500 text-xs">
-                                <i class="fas fa-calendar-alt mr-1"></i>25 September 2024
-                            </span>
-                            <span class="text-gray-500 text-xs">
-                                <i class="fas fa-user mr-1"></i>Admin SMK
-                            </span>
-                        </div>
-
-                        <h1 class="text-3xl lg:text-4xl font-bold text-gray-800 leading-tight mb-4">
-                            ini judul berita
-                        </h1>
-
-                        <p class="text-gray-600 text-lg leading-relaxed">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec nisl nec nunc
-                            placerat blandit sit amet et magna.
-                        </p>
-                    </div>
-
-                    <!-- Article Content -->
-                    <div class="article-content p-6">
-                        <figure class="mb-6">
-                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1000&q=80"
-                                alt="Gambar contoh" class="w-full h-64 md:h-80 object-cover">
-                            <figcaption class="text-sm text-gray-500 mt-2 text-center italic">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </figcaption>
-                        </figure>
-
-                        <p class="text-gray-700 leading-relaxed mb-6">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris vel orci
-                            varius imperdiet. Suspendisse potenti. Integer laoreet, turpis nec consequat euismod, magna
-                            purus rhoncus dui.
-                        </p>
-
-                        <!-- Tags -->
-                        <div class="border-t border-gray-200 pt-6 mt-6">
-                            <div class="mb-3">
-                                <h5 class="text-sm font-semibold text-gray-600 mb-2">Tags:</h5>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs">#Lorem</span>
-                                    <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs">#Ipsum</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="sidebar-sticky space-y-6">
-
-                    <!-- Author Info -->
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="font-bold text-gray-800 mb-4">
-                            <i class="fas fa-user-edit mr-2 text-green-600"></i>Penulis
-                        </h3>
-                        <div class="flex items-start space-x-3">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-                                alt="Admin SMK" class="w-12 h-12 rounded-full object-cover">
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Admin SMK</h4>
-                                <p class="text-sm text-gray-600">Tim Redaksi</p>
-                                <p class="text-xs text-gray-500 mt-1">Bergabung sejak 2020</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Latest Articles -->
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="font-bold text-gray-800 mb-4">
-                            <i class="fas fa-newspaper mr-2 text-green-600"></i>Artikel Terbaru
-                        </h3>
-                        <div class="space-y-4">
-                            <article class="border-b border-gray-100 pb-4">
-                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                                    alt="Artikel 1" class="w-full h-24 object-cover rounded mb-3">
-                                <h4
-                                    class="font-semibold text-sm text-gray-800 hover:text-green-600 transition cursor-pointer line-clamp-2">
-                                    Prestasi Gemilang Siswa SMK di Kompetisi Nasional
-                                </h4>
-                                <p class="text-xs text-gray-500 mt-1">22 September 2024</p>
-                            </article>
-
-                            <article class="border-b border-gray-100 pb-4">
-                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                                    alt="Artikel 2" class="w-full h-24 object-cover rounded mb-3">
-                                <h4
-                                    class="font-semibold text-sm text-gray-800 hover:text-green-600 transition cursor-pointer line-clamp-2">
-                                    Workshop Teknologi AI untuk Siswa PPLG
-                                </h4>
-                                <p class="text-xs text-gray-500 mt-1">20 September 2024</p>
-                            </article>
-
-                            <article>
-                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                                    alt="Artikel 3" class="w-full h-24 object-cover rounded mb-3">
-                                <h4
-                                    class="font-semibold text-sm text-gray-800 hover:text-green-600 transition cursor-pointer line-clamp-2">
-                                    Kerjasama SMK dengan Industri Teknologi
-                                </h4>
-                                <p class="text-xs text-gray-500 mt-1">18 September 2024</p>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="relative overflow-hidden bg-gradient-to-br from-emerald-900 to-emerald-950 text-gray-300">
-        <div class="relative max-w-7xl mx-auto px-6 pt-20 pb-12">
-
-            <!-- Main Footer Content -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-
-                <!-- School Info -->
-                <div class="lg:col-span-2 space-y-6">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <!-- School Logo -->
-                        <div
-                            class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
-                            <img src="asset/logo/logo1.PNG" alt="logo">
+                <!-- Author Info -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border-2" style="border: 2px solid rgba(72, 187, 120, 0.2);">
+                    <h3 class="font-bold mb-4 flex items-center" style="color: var(--text);">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                        Penulis
+                    </h3>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold shadow-md" 
+                             style="background: linear-gradient(to bottom right, var(--primary), var(--secondary));">
+                            A
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-white">SMK Juara</h3>
-                            <p class="text-emerald-300 text-sm">Excellence in Education</p>
+                            <h4 class="font-semibold" style="color: var(--text);">Admin SMK</h4>
+                            <p class="text-sm" style="color: var(--text);">Tim Redaksi</p>
+                            <p class="text-xs mt-1" style="color: var(--text); opacity: 0.5;">Bergabung sejak 2020</p>
                         </div>
                     </div>
-
-                    <p class="text-gray-300 leading-relaxed max-w-md">
-                        Membangun generasi unggul melalui pendidikan berkualitas dengan teknologi terdepan dan
-                        pembelajaran yang inovatif untuk masa depan yang cerah.
-                    </p>
-
                 </div>
 
-                <!-- Quick Links -->
-                <div class="space-y-6">
-                    <h4 class="text-xl font-bold text-white flex items-center">
-                        <div class="w-1 h-6 bg-gradient-to-b from-emerald-400 to-green-600 rounded-full mr-3"></div>
-                        Menu Utama
-                    </h4>
-                    <ul class="space-y-4">
-                        <li><a href="index.html #beranda"
-                                class="text-gray-300 hover:text-emerald-400 transition">Beranda</a></li>
-                        <li><a href="index.html #tentangg-kami"
-                                class="text-gray-300 hover:text-emerald-400 transition">Tentang Kami</a></li>
-                        <li><a href="index.html #kompetensi-keahlian"
-                                class="text-gray-300 hover:text-emerald-400 transition">Kompetensi Keahlian</a></li>
-                        <li><a href="index.html #fasilitas"
-                                class="text-gray-300 hover:text-emerald-400 transition">Fasilitas</a></li>
-                        <li><a href="index.html #berita"
-                                class="text-gray-300 hover:text-emerald-400 transition">Berita</a></li>
-                    </ul>
-                </div>
+                <!-- Latest Articles -->
+<div class="bg-white rounded-2xl shadow-lg p-6 border-2 border-[rgba(72,187,120,0.2)]">
+    <h3 class="font-bold mb-4 flex items-center text-[var(--text)]">
+        <svg class="w-5 h-5 mr-2 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+        </svg>
+        Artikel Terbaru
+    </h3>
+    <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4">
+        <article class="group cursor-pointer border-b pb-4 border-[rgba(72,187,120,0.2)] transition-all duration-300 hover:shadow-lg hover:border-[var(--primary)]">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=300&q=80"
+                alt="Artikel 1" class="w-full h-24 sm:h-28 md:h-32 lg:h-24 object-cover rounded-lg mb-3 transition-transform duration-300 group-hover:scale-105">
+            <h4 class="font-semibold text-sm line-clamp-2 transition-colors duration-300 group-hover:text-[var(--primary)]" style="color: var(--text);">
+                Program Literasi Digital untuk Siswa Kelas X
+            </h4>
+            <p class="text-xs mt-1 text-[var(--text)] opacity-60">15 September 2025</p>
+        </article>
 
-                <!-- Contact Info -->
-                <div class="space-y-6">
-                    <h4 class="text-xl font-bold text-white flex items-center">
-                        <div class="w-1 h-6 bg-gradient-to-b from-emerald-400 to-green-600 rounded-full mr-3"></div>
-                        Hubungi Kami
-                    </h4>
-                    <div class="space-y-4">
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            Jl. Pendidikan No. 45<br>
-                            Bandung, Jawa Barat
-                        </p>
-                        <p class="text-gray-300">+62 812-3456-7890</p>
-                        <p class="text-gray-300">info@smkjuara.sch.id</p>
-                    </div>
-                </div>
+        <article class="group cursor-pointer border-b pb-4 border-[rgba(72,187,120,0.2)] transition-all duration-300 hover:shadow-lg hover:border-[var(--primary)]">
+            <img src="https://images.unsplash.com/photo-1584697964403-0fbf8248b3fb?auto=format&fit=crop&w=300&q=80"
+                alt="Artikel 2" class="w-full h-24 sm:h-28 md:h-32 lg:h-24 object-cover rounded-lg mb-3 transition-transform duration-300 group-hover:scale-105">
+            <h4 class="font-semibold text-sm line-clamp-2 transition-colors duration-300 group-hover:text-[var(--primary)]" style="color: var(--text);">
+                Workshop Desain Grafis untuk Siswa Multimedia
+            </h4>
+            <p class="text-xs mt-1 text-[var(--text)] opacity-60">12 September 2025</p>
+        </article>
+
+        <article class="group cursor-pointer transition-all duration-300 hover:shadow-lg">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=300&q=80"
+                alt="Artikel 3" class="w-full h-24 sm:h-28 md:h-32 lg:h-24 object-cover rounded-lg mb-3 transition-transform duration-300 group-hover:scale-105">
+            <h4 class="font-semibold text-sm line-clamp-2 transition-colors duration-300 group-hover:text-[var(--primary)]" style="color: var(--text);">
+                Kegiatan Ekstrakurikuler Pramuka di Akhir Pekan
+            </h4>
+            <p class="text-xs mt-1 text-[var(--text)] opacity-60">10 September 2025</p>
+        </article>
+    </div>
+</div>
+
             </div>
+        </aside>
 
-            <!-- Social Media & Newsletter -->
-            <div
-                class="border-t border-white/10 pt-8 mb-8 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+    </div>
+</div>
 
-                <!-- Social Media -->
-                <div class="flex items-center space-x-6">
-                    <h5 class="text-white font-semibold">Follow Us:</h5>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition">Facebook</a>
-                        <a href="#" class="text-gray-400 hover:text-blue-500 transition">Twitter</a>
-                        <a href="#" class="text-gray-400 hover:text-pink-400 transition">Instagram</a>
-                        <a href="#" class="text-gray-400 hover:text-red-400 transition">YouTube</a>
-                    </div>
-                </div>
-            </div>
+    <!-- Footer -->
+<footer class="relative overflow-hidden text-white"
+        style="background: linear-gradient(to bottom right, #0b2e1f, #111111);">
+  <div class="relative max-w-7xl mx-auto px-6 pt-20 pb-12">
 
-            <!-- Bottom Copyright -->
-            <div
-                class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <div class="text-gray-400 text-sm">
-                    © 2025 SMK Juara. All rights reserved. Made with
-                    <span class="text-red-400"></span>
-                    for education.
-                </div>
-                <div class="flex space-x-6 text-sm">
-                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">Terms of Service</a>
-                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">Sitemap</a>
-                </div>
-            </div>
+    <!-- Main Footer Content -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+      <!-- School Info -->
+      <div class="lg:col-span-2 space-y-6">
+        <div class="flex items-center space-x-3 mb-6">
+          <!-- School Logo -->
+          <div class="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg"
+               style="background: linear-gradient(to bottom right, var(--primary), #0b2e1f);">
+            <img src="asset/logo/logo1.PNG" alt="logo" class="rounded-lg">
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">SMK Juara</h3>
+            <p class="text-sm text-[var(--primary)]">Excellence in Education</p>
+          </div>
         </div>
-    </footer>
 
+        <p class="leading-relaxed max-w-md text-white/80">
+          Membangun generasi unggul melalui pendidikan berkualitas dengan teknologi terdepan dan pembelajaran yang
+          inovatif untuk masa depan yang cerah.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-6">
+        <h4 class="text-xl font-bold text-white flex items-center">
+          <div class="w-1 h-6 rounded-full mr-3"
+               style="background: linear-gradient(to bottom, var(--primary), #0b2e1f);"></div>
+          Menu Utama
+        </h4>
+        <ul class="space-y-4">
+          <li><a href="index.html #beranda" class="transition hover:text-[var(--primary)] text-white">Beranda</a></li>
+          <li><a href="index.html #tentang-kami" class="transition hover:text-[var(--primary)] text-white">Tentang Kami</a></li>
+          <li><a href="index.html #kompetensi-keahlian" class="transition hover:text-[var(--primary)] text-white">Kompetensi Keahlian</a></li>
+          <li><a href="index.html #fasilitas" class="transition hover:text-[var(--primary)] text-white">Fasilitas</a></li>
+          <li><a href="index.html #berita" class="transition hover:text-[var(--primary)] text-white">Berita</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <h4 class="text-xl font-bold text-white flex items-center">
+          <div class="w-1 h-6 rounded-full mr-3"
+               style="background: linear-gradient(to bottom, var(--primary), #0b2e1f);"></div>
+          Hubungi Kami
+        </h4>
+        <div class="space-y-4">
+          <p class="text-sm leading-relaxed text-white">
+            Jl. Pendidikan No. 45<br>
+            Bandung, Jawa Barat
+          </p>
+          <p class="text-white">+62 812-3456-7890</p>
+          <p class="text-white">info@smkjuara.sch.id</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="border-t pt-8 mb-8 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0"
+         style="border-color: rgba(255,255,255,0.1);">
+      <div class="flex items-center space-x-6">
+        <h5 class="font-semibold text-white">Follow Us:</h5>
+        <div class="flex space-x-4">
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">Facebook</a>
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">Twitter</a>
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">Instagram</a>
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="border-t pt-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+         style="border-color: rgba(255,255,255,0.1);">
+      <div class="text-sm text-white/70">
+        © 2025 SMK Juara. All rights reserved. Made with
+        <span class="text-[var(--primary)]">♥</span>
+        for education.
+      </div>
+      <div class="flex space-x-6 text-sm">
+        <a href="#" class="transition hover:text-[var(--primary)] text-white">Privacy Policy</a>
+        <a href="#" class="transition hover:text-[var(--primary)] text-white">Terms of Service</a>
+        <a href="#" class="transition hover:text-[var(--primary)] text-white">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script>
+// Mobile Menu Toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+  const spans = menuBtn.querySelectorAll('span');
+  if (!mobileMenu.classList.contains('hidden')) {
+    spans[0].style.transform = 'rotate(45deg) translateY(7px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translateY(-7px)';
+  } else {
+    spans[0].style.transform = 'none';
+    spans[1].style.opacity = '1';
+    spans[2].style.transform = 'none';
+  }
+});
+
+// Theme Switcher Dropdown
+const themeBtn = document.getElementById('theme-btn');
+const themeDropdown = document.getElementById('theme-dropdown');
+const themeOptions = document.querySelectorAll('.theme-option');
+
+themeBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  themeDropdown.classList.toggle('hidden');
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (!themeBtn.contains(e.target) && !themeDropdown.contains(e.target)) {
+    themeDropdown.classList.add('hidden');
+  }
+});
+
+// Theme switching logic
+themeOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    const theme = option.getAttribute('data-theme');
+    document.documentElement.className = theme;
+    localStorage.setItem('theme', theme);
+    themeDropdown.classList.add('hidden');
+    
+    // Add visual feedback
+    themeOptions.forEach(opt => opt.classList.remove('bg-[var(--secondary)]/30'));
+    option.classList.add('bg-[var(--secondary)]/30');
+  });
+});
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.documentElement.className = savedTheme;
+  themeOptions.forEach(option => {
+    if (option.getAttribute('data-theme') === savedTheme) {
+      option.classList.add('bg-[var(--secondary)]/30');
+    }
+  });
+}
+
+// Close mobile menu when clicking nav links
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    const spans = menuBtn.querySelectorAll('span');
+    spans[0].style.transform = 'none';
+    spans[1].style.opacity = '1';
+    spans[2].style.transform = 'none';
+  });
+});
+
+// Navbar scroll effect
+let lastScroll = 0;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll > 100) {
+    navbar.classList.add('shadow-md');
+  } else {
+    navbar.classList.remove('shadow-md');
+  }
+  
+  lastScroll = currentScroll;
+});
+</script>
+<script src="js/theme.js"></script>
 </body>
 
 </html>

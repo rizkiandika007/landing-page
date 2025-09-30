@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>landing page template sekolah</title>
+  <link rel="stylesheet" href="css/theme.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   <script>
@@ -101,705 +102,892 @@
 <body class="bg-cream min-h-screen">
 
   <!-- Header -->
-  <header id="navbar"
-    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-sm border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<header id="navbar"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[var(--background)]/95 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
 
-      <!-- Logo -->
-      <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-lg flex items-center justify-center">
-          <img src="asset/logo/logo1.PNG" alt="Logo" class="w-18 h-18">
-        </div>
-        <div>
-          <div class="font-bold text-forest text-lg">SMKN JUARA</div>
+    <!-- Logo -->
+    <div class="flex items-center space-x-2 sm:space-x-3">
+      <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center">
+        <img src="asset/logo/logo1.PNG" alt="Logo" class="w-full h-full object-contain">
+      </div>
+      <div>
+        <div class="font-bold text-base sm:text-lg text-[var(--primary)]">SMKN JUARA</div>
+      </div>
+    </div>
+
+    <!-- Navigation (desktop) -->
+    <nav class="hidden lg:flex space-x-6 xl:space-x-8 text-[var(--text)]">
+      <a href="#beranda" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Beranda
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#tentang-kami" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Tentang Kami
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#kompetensi-keahlian" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Kompetensi Keahlian
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#fasilitas" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Fasilitas
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#berita" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Berita
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#kontak" class="relative group font-medium text-sm xl:text-base hover:text-[var(--primary)] transition-colors">
+        Kontak
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </nav>
+
+    <!-- Right Section: Theme Switcher + CTA + Mobile Menu -->
+    <div class="flex items-center space-x-3 sm:space-x-4">
+      
+      <!-- Theme Switcher (Desktop & Mobile) -->
+      <div class="relative">
+        <button id="theme-btn" 
+                class="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[var(--secondary)]/20 hover:bg-[var(--secondary)]/30 transition-all duration-300 group">
+          <svg class="w-5 h-5 text-[var(--primary)] group-hover:rotate-180 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+          </svg>
+        </button>
+        
+        <!-- Theme Dropdown -->
+        <div id="theme-dropdown" 
+             class="hidden absolute right-0 mt-2 w-48 bg-[var(--background)] rounded-xl shadow-2xl border border-[var(--border)] overflow-hidden">
+          <div class="p-2 bg-[var(--secondary)]/10 border-b border-[var(--border)]">
+            <p class="text-xs font-semibold text-[var(--text)] px-2">Pilih Tema</p>
+          </div>
+          <div class="p-2 space-y-1">
+            <button data-theme="" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Biru</span>
+            </button>
+            <button data-theme="theme-red" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Merah</span>
+            </button>
+            <button data-theme="theme-purple" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Ungu</span>
+            </button>
+            <button data-theme="theme-green" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Hijau</span>
+            </button>
+            <button data-theme="theme-yellow" 
+                    class="theme-option w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-[var(--secondary)]/20 transition-all duration-200 group">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600 shadow-md group-hover:scale-110 transition-transform"></div>
+              <span class="text-sm font-medium text-[var(--text)]">Kuning</span>
+            </button>
+          </div>
         </div>
       </div>
-
-      <!-- Navigation (desktop) -->
-      <nav class="hidden md:flex space-x-8 text-gray-700">
-        <a href="#beranda" class="relative group font-medium">
-          Beranda
-          <span
-            class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#tentang-kami" class="relative group font-medium">Tentang Kami
-          <span
-            class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#kompetensi-keahlian" class="relative group font-medium">Kompetensi Keahlian
-          <span
-            class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#fasilitas" class="relative group font-medium">Fasilitas
-          <span
-            class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#berita" class="relative group font-medium">Berita
-          <span
-            class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#kontak" class="relative group font-medium">Kontak
-          <span
-            class="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-      </nav>
 
       <!-- CTA Button (desktop only) -->
-      <button
-        class="hidden md:inline-block px-6 py-3 bg-green-600 text-white rounded-full font-semibold transition-all duration-300 transform hover:bg-green-700 hover:shadow-lg hover:scale-105 shadow-md">
+      <a href="#kontak"
+         class="hidden lg:inline-flex items-center px-4 xl:px-6 py-2 xl:py-3 bg-[var(--primary)] text-white rounded-full font-semibold text-sm xl:text-base transition-all duration-300 transform hover:opacity-90 hover:shadow-lg hover:scale-105 shadow-md">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
         Hubungi Kami
-      </button>
+      </a>
 
       <!-- Hamburger (mobile only) -->
-      <button id="menu-btn" class="md:hidden flex flex-col space-y-1">
-        <span class="w-6 h-0.5 bg-gray-700"></span>
-        <span class="w-6 h-0.5 bg-gray-700"></span>
-        <span class="w-6 h-0.5 bg-gray-700"></span>
+      <button id="menu-btn" class="lg:hidden flex flex-col space-y-1.5 w-9 h-9 items-center justify-center rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">
+        <span class="w-5 h-0.5 bg-[var(--text)] transition-all duration-300"></span>
+        <span class="w-5 h-0.5 bg-[var(--text)] transition-all duration-300"></span>
+        <span class="w-5 h-0.5 bg-[var(--text)] transition-all duration-300"></span>
       </button>
     </div>
+  </div>
 
-    <!-- Mobile menu (hidden by default) -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
-      <nav class="flex flex-col space-y-4 px-6 py-4 text-gray-700">
-        <a href="#beranda" class="font-medium">Beranda</a>
-        <a href="#tentang-kami" class="font-medium">Tentang Kami</a>
-        <a href="#kompetensi-keahlian" class="font-medium">Kompetensi Keahlian</a>
-        <a href="#fasilitas" class="font-medium">Fasilitas</a>
-        <a href="#berita" class="font-medium">Berita</a>
-        <a href="#kontak" class="font-medium">Kontak</a>
-        <button
-          class="px-6 py-3 bg-green-600 text-white rounded-full font-semibold transition-all duration-300 transform hover:bg-green-700 hover:shadow-lg hover:scale-105 shadow-md">
-          Hubungi Kami
-        </button>
-      </nav>
-    </div>
-  </header>
+  <!-- Mobile menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-[var(--background)]/98 backdrop-blur-md border-t border-[var(--border)]/50">
+    <nav class="flex flex-col space-y-1 px-4 sm:px-6 py-4 text-[var(--text)]">
+      <a href="#beranda" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Beranda</a>
+      <a href="#tentang-kami" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Tentang Kami</a>
+      <a href="#kompetensi-keahlian" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Kompetensi Keahlian</a>
+      <a href="#fasilitas" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Fasilitas</a>
+      <a href="#berita" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Berita</a>
+      <a href="#kontak" class="font-medium px-4 py-3 rounded-lg hover:bg-[var(--secondary)]/20 transition-colors">Kontak</a>
+      <a href="#kontak"
+         class="flex items-center justify-center px-6 py-3 mt-2 bg-[var(--primary)] text-white rounded-full font-semibold transition-all duration-300 transform hover:opacity-90 hover:shadow-lg hover:scale-105 shadow-md">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        Hubungi Kami
+      </a>
+    </nav>
+  </div>
+</header>
 
   <!-- Main Content -->
-  <main id="beranda" class="relative min-h-screen w-full 
-             bg-white 
+<main id="beranda" class="relative min-h-screen w-full 
+             bg-[var(--background)] 
              flex items-center justify-center overflow-hidden">
 
-    <!-- Overlay Nuansa Hijau-Teal (tipis banget) -->
-    <div class="absolute inset-0 bg-gradient-to-r from-emerald-400/10 via-teal-300/10 to-green-400/10"></div>
+  <!-- Gradient Fade Bawah (background → transparan) -->
+  <div class="absolute bottom-0 left-0 w-full h-28 
+            bg-gradient-to-t from-[var(--background)] via-[var(--background)]/80 to-transparent pointer-events-none"></div>
 
-    <!-- Gradient Fade Bawah (putih → transparan) -->
-    <div class="absolute bottom-0 left-0 w-full h-28 
-              bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
+  <div class="relative max-w-7xl mx-auto px-6 py-16 md:py-24 
+            grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center z-10">
 
-    <div class="relative max-w-7xl mx-auto px-6 py-16 md:py-24 
-              grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center z-10">
-
-      <!-- Left Content -->
-      <div class="space-y-6 md:space-y-8 animate-slideIn text-center lg:text-left">
-        <div>
-          <h1
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-4 md:mb-6 text-gray-900 drop-shadow-sm">
-            Selamat Datang di<br>
-            SMKNJUARA<br>
-            <span class="text-teal-600">Sekolah Unggulan</span>
-          </h1>
-          <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-xl mx-auto lg:mx-0">
-            Selamat datang di SMK Jabar Juara, institusi pendidikan vokasi terkemuka di Jawa Barat
-            yang berkomitmen mencetak generasi muda berdaya saing global.
-            Berlokasi strategis di Kota Bandung, SMK Jabar Juara hadir sebagai jawaban atas kebutuhan industri.
-          </p>
-        </div>
-
-        <!-- CTA Button -->
-        <div class="animate-fadeInUp">
-          <button
-            class="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-xl font-semibold text-base sm:text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center space-x-2 mx-auto lg:mx-0">
-            <span>Jelajahi Program →</span>
-          </button>
-        </div>
-
-        <!-- Service Tags -->
-        <div class="flex flex-wrap justify-center lg:justify-start gap-3 animate-fadeInUp">
-          <span
-            class="px-3 sm:px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-xs sm:text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">💻
-            Lab PPLG</span>
-          <span
-            class="px-3 sm:px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-xs sm:text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">📊
-            Lab MPLB</span>
-          <span
-            class="px-3 sm:px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-xs sm:text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">📚
-            Perpustakaan</span>
-          <span
-            class="px-3 sm:px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-xs sm:text-sm font-medium border border-teal-200 hover:bg-teal-200 transition-colors cursor-pointer">🏟️
-            Lapangan</span>
-        </div>
+    <!-- Left Content -->
+    <div class="space-y-6 md:space-y-8 animate-slideIn text-center lg:text-left">
+      <div>
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-4 md:mb-6 text-[var(--text)] drop-shadow-sm">
+          Selamat Datang di<br>
+          SMKNJUARA<br>
+          <span class="text-[var(--primary)]">Sekolah Unggulan</span>
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl text-[var(--text-muted)] leading-relaxed max-w-xl mx-auto lg:mx-0">
+          Selamat datang di SMK Jabar Juara, institusi pendidikan vokasi terkemuka di Jawa Barat
+          yang berkomitmen mencetak generasi muda berdaya saing global.
+          Berlokasi strategis di Kota Bandung, SMK Jabar Juara hadir sebagai jawaban atas kebutuhan industri.
+        </p>
       </div>
 
-      <!-- Right Visual -->
-      <div class="relative flex justify-center items-center mt-10 lg:mt-0">
-        <img src="asset/foto/sma.png" alt="Hero Illustration"
-          class="w-64 sm:w-80 md:w-[400px] lg:w-[500px] h-auto rounded-xl">
+      <!-- CTA Button -->
+      <div class="animate-fadeInUp">
+        <button
+          class="px-6 sm:px-8 py-3 sm:py-4 bg-[var(--primary)] text-white rounded-xl font-semibold text-base sm:text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center space-x-2 mx-auto lg:mx-0">
+          <span>Jelajahi Program →</span>
+        </button>
+      </div>
+
+      <!-- Service Tags -->
+      <div class="flex flex-wrap justify-center lg:justify-start gap-3 animate-fadeInUp">
+        <span
+          class="px-3 sm:px-4 py-2 bg-[var(--accent-bg)] text-[var(--primary)] rounded-full text-xs sm:text-sm font-medium border border-[var(--primary)]/30 hover:bg-[var(--primary)]/10 transition-colors cursor-pointer">💻
+          Lab PPLG</span>
+        <span
+          class="px-3 sm:px-4 py-2 bg-[var(--accent-bg)] text-[var(--primary)] rounded-full text-xs sm:text-sm font-medium border border-[var(--primary)]/30 hover:bg-[var(--primary)]/10 transition-colors cursor-pointer">📊
+          Lab MPLB</span>
+        <span
+          class="px-3 sm:px-4 py-2 bg-[var(--accent-bg)] text-[var(--primary)] rounded-full text-xs sm:text-sm font-medium border border-[var(--primary)]/30 hover:bg-[var(--primary)]/10 transition-colors cursor-pointer">📚
+          Perpustakaan</span>
+        <span
+          class="px-3 sm:px-4 py-2 bg-[var(--accent-bg)] text-[var(--primary)] rounded-full text-xs sm:text-sm font-medium border border-[var(--primary)]/30 hover:bg-[var(--primary)]/10 transition-colors cursor-pointer">🏟️
+          Lapangan</span>
       </div>
     </div>
-  </main>
 
-  <!-- tentang kami -->
+    <!-- Right Visual -->
+    <div class="relative flex justify-center items-center mt-10 lg:mt-0">
+      <img src="asset/foto/sma.png" alt="Hero Illustration"
+        class="w-64 sm:w-80 md:w-[400px] lg:w-[500px] h-auto rounded-xl">
+    </div>
+  </div>
+</main>
+
+  <!-- Tentang Kami Section -->
   <section id="tentang-kami"
     class="relative py-24 px-6 bg-gradient-to-br from-gray-50 via-white to-emerald-50 overflow-hidden">
-    <!-- Decorative Background Elements -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div
-        class="absolute top-40 right-20 w-96 h-96 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20">
-      </div>
-      <div
-        class="absolute bottom-40 left-20 w-96 h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20">
-      </div>
+<!-- Decorative Background Elements -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div
+      class="absolute top-40 right-20 w-96 h-96 bg-[var(--primary)] rounded-full mix-blend-multiply filter blur-3xl opacity-20">
     </div>
+    <div
+      class="absolute bottom-40 left-20 w-96 h-96 bg-[var(--secondary)] rounded-full mix-blend-multiply filter blur-3xl opacity-20">
+    </div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto space-y-32">
 
     <div class="relative max-w-7xl mx-auto space-y-32">
 
       <!-- Bagian Tentang SMKN Juara -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <!-- Gambar -->
-        <div class="relative group order-2 lg:order-1">
-          <div
-            class="absolute -inset-4 bg-gradient-to-r from-emerald-400 to-green-500 rounded-3xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-500">
-          </div>
-          <div class="relative overflow-hidden rounded-3xl shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=1000&q=80"
-              alt="SMKN Juara"
-              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out">
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-          </div>
-          <div
-            class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl px-6 py-4 transform group-hover:scale-105 transition-transform duration-300">
-            <div class="flex items-center gap-3">
-              <span class="relative flex h-3 w-3">
-                <span
-                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-              </span>
-              <span class="text-sm font-bold text-gray-900">30+ Guru Profesional</span>
-            </div>
-          </div>
+  <!-- Gambar -->
+  <div class="relative group order-2 lg:order-1">
+    <div
+      class="absolute -inset-4 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] rounded-3xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-500">
+    </div>
+    <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+      <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=1000&q=80"
+        alt="SMKN Juara"
+        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out">
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
+    </div>
+    <div
+      class="absolute bottom-6 left-6 bg-[var(--card)] backdrop-blur-md rounded-2xl shadow-xl px-6 py-4 transform group-hover:scale-105 transition-transform duration-300">
+      <div class="flex items-center gap-3">
+        <span class="relative flex h-3 w-3">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--primary)] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-[var(--primary-dark)]"></span>
+        </span>
+        <span class="text-sm font-bold text-[var(--text)]">30+ Guru Profesional</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teks -->
+  <div class="order-1 lg:order-2">
+    <div class="inline-block mb-4">
+      <span
+        class="text-[var(--primary)] text-sm font-semibold uppercase tracking-wider px-4 py-2 bg-[var(--primary-bg)] rounded-full">
+        Tentang Kami
+      </span>
+    </div>
+    <h2 class="text-4xl lg:text-5xl font-black text-[var(--text)] tracking-tight leading-tight mb-6">
+      Tentang <span
+        class="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text text-transparent">SMKN
+        Juara</span>
+    </h2>
+    <div class="w-20 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] rounded-full mb-8"></div>
+
+    <p class="text-lg text-[var(--text-muted)] leading-relaxed mb-8 text-justify">
+      SMKN Juara hadir sebagai sekolah kejuruan modern yang memadukan <span
+        class="font-semibold text-[var(--text)]">pendidikan berkualitas</span> dengan pengalaman praktis.
+      Dengan dukungan guru profesional, fasilitas terkini, serta kolaborasi bersama industri, kami membekali siswa
+      tidak hanya dengan pengetahuan,
+      tetapi juga keterampilan nyata yang siap pakai untuk dunia kerja maupun wirausaha.
+    </p>
+
+    <ul class="space-y-4 mb-10">
+      <li class="flex items-start gap-4 group">
+        <span
+          class="flex-shrink-0 flex items-center justify-center w-8 h-8 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] text-white rounded-lg font-bold text-sm">✓</span>
+        <span class="text-[var(--text-muted)] text-base leading-relaxed pt-1">Kurikulum berbasis industri 4.0</span>
+      </li>
+      <li class="flex items-start gap-4 group">
+        <span
+          class="flex-shrink-0 flex items-center justify-center w-8 h-8 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] text-white rounded-lg font-bold text-sm">✓</span>
+        <span class="text-[var(--text-muted)] text-base leading-relaxed pt-1">Laboratorium modern & teknologi
+          terkini</span>
+      </li>
+      <li class="flex items-start gap-4 group">
+        <span
+          class="flex-shrink-0 flex items-center justify-center w-8 h-8 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] text-white rounded-lg font-bold text-sm">✓</span>
+        <span class="text-[var(--text-muted)] text-base leading-relaxed pt-1">Program magang eksklusif &
+          sertifikasi nasional</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+      <!-- Bagian Pesan Kepala Sekolah -->
+<div class="relative">
+  <div
+    class="absolute -inset-4 bg-[var(--card)] from-[var(--primary)] to-[var(--secondary)] rounded-3xl opacity-10 blur-3xl">
+  </div>
+
+  <div class="relative bg-[var(--card)] rounded-3xl">
+    <div class="grid md:grid-cols-2 gap-0 items-center">
+
+      <!-- Bagian Teks -->
+      <div class="p-8 md:p-12 flex flex-col justify-center bg-gradient-to-br from-[var(--card)] to-[var(--primary-bg)]">
+        <div class="inline-block mb-4">
+          <span
+            class="text-[var(--primary)] text-sm font-semibold uppercase tracking-wider px-4 py-2 bg-[var(--primary-bg)] rounded-full">
+            Pesan Kepala Sekolah
+          </span>
         </div>
 
-        <!-- Teks -->
-        <div class="order-1 lg:order-2">
-          <div class="inline-block mb-4">
-            <span
-              class="text-emerald-600 text-sm font-semibold uppercase tracking-wider px-4 py-2 bg-emerald-50 rounded-full">Tentang
-              Kami</span>
-          </div>
-          <h2 class="text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-6">
-            Tentang <span class="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">SMKN
-              Juara</span>
-          </h2>
-          <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full mb-8"></div>
+        <h3 class="text-3xl lg:text-4xl font-black text-[var(--text)] mb-6 leading-tight">
+          Sambutan <span
+            class="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text text-transparent">Kepala
+            Sekolah</span>
+        </h3>
 
-          <p class="text-lg text-gray-600 leading-relaxed mb-8 text-justify">
-            SMKN Juara hadir sebagai sekolah kejuruan modern yang memadukan <span
-              class="font-semibold text-gray-900">pendidikan berkualitas</span> dengan pengalaman praktis.
-            Dengan dukungan guru profesional, fasilitas terkini, serta kolaborasi bersama industri, kami membekali siswa
-            tidak hanya dengan pengetahuan,
-            tetapi juga keterampilan nyata yang siap pakai untuk dunia kerja maupun wirausaha.
-          </p>
+        <div class="w-20 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] rounded-full mb-6"></div>
 
-          <ul class="space-y-4 mb-10">
-            <li class="flex items-start gap-4 group">
-              <span
-                class="flex-shrink-0 flex items-center justify-center w-8 h-8 bg-gradient-to-br from-emerald-500 to-green-600 text-white rounded-lg font-bold text-sm ">✓</span>
-              <span class="text-gray-700 text-base leading-relaxed pt-1">Kurikulum berbasis industri 4.0</span>
-            </li>
-            <li class="flex items-start gap-4 group">
-              <span
-                class="flex-shrink-0 flex items-center justify-center w-8 h-8 bg-gradient-to-br from-emerald-500 to-green-600 text-white rounded-lg font-bold text-sm ">✓</span>
-              <span class="text-gray-700 text-base leading-relaxed pt-1">Laboratorium modern & teknologi terkini</span>
-            </li>
-            <li class="flex items-start gap-4 group">
-              <span
-                class="flex-shrink-0 flex items-center justify-center w-8 h-8 bg-gradient-to-br from-emerald-500 to-green-600 text-white rounded-lg font-bold text-sm ">✓</span>
-              <span class="text-gray-700 text-base leading-relaxed pt-1">Program magang eksklusif & sertifikasi
-                nasional</span>
-            </li>
-          </ul>
+        <p class="text-[var(--text-muted)] text-base leading-relaxed mb-6 text-justify">
+          Di SMKN Juara, kami berkomitmen untuk membentuk generasi muda yang tidak hanya unggul dalam bidang akademik,
+          tetapi juga memiliki karakter kuat dan keterampilan yang relevan dengan dunia industri.
+        </p>
+
+        <p class="text-[var(--text-muted)] text-base leading-relaxed mb-8 text-justify">
+          Kami percaya bahwa setiap siswa memiliki potensi luar biasa yang siap dikembangkan melalui pendidikan
+          berkualitas, bimbingan yang tepat, dan lingkungan belajar yang kondusif.
+        </p>
+
+        <div class="mt-4 pt-6 border-t-2 border-[var(--border)]">
+          <p class="text-[var(--text)] font-black text-xl mb-1">Drs. Ahmad Suryanto, M.Pd</p>
+          <p class="text-[var(--primary)] font-semibold text-sm">Kepala Sekolah SMKN Juara</p>
         </div>
       </div>
+
+      <!-- Bagian Gambar -->
+      <div class="relative bg-gradient-to-br from-[var(--primary-bg)] to-[var(--secondary-bg)] p-8 md:p-12 flex items-center justify-center">
+        <div
+          class="absolute top-6 left-6 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+          SMKN Juara
+        </div>
+
+        <div class="relative group">
+          <!-- Foto Kepala Sekolah -->
+          <div class="relative w-72 h-96 rounded-2xl shadow-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+              alt="Kepala Sekolah SMKN Juara"
+              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+          </div>
+
+          <!-- Elemen dekoratif -->
+          <div
+            class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-[var(--secondary)] to-[var(--primary)] rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-500">
+          </div>
+
+          <!-- Badge Dekoratif -->
+          <div
+            class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-[var(--card)] backdrop-blur-md rounded-2xl shadow-xl px-5 py-3">
+            <div class="flex items-center gap-2">
+              <span class="relative flex h-2.5 w-2.5">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--primary)] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--primary-dark)]"></span>
+              </span>
+              <span class="text-xs font-bold text-[var(--text)]">Kepala Sekolah</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
       <!-- Bagian Visi Misi -->
-      <div class="w-full">
-        <!-- Header -->
-        <div class="text-center mb-16">
-          <div class="inline-block mb-4">
-            <span
-              class="text-orange-500 text-sm font-semibold uppercase tracking-wider px-4 py-2 bg-orange-50 rounded-full">Visi
-              & Misi</span>
-          </div>
-          <h2 class="text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-6">
-            Visi & Misi <span class="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">SMKN
-              Juara</span>
-          </h2>
-          <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full mx-auto mb-6"></div>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Landasan kami dalam mendidik generasi muda agar siap menghadapi tantangan dunia kerja dan masa depan.
-          </p>
-        </div>
+<div class="w-full">
+  <!-- Header -->
+  <div class="text-center mb-16">
+    <div class="inline-block mb-4">
+      <span
+        class="text-[var(--primary)] text-sm font-semibold uppercase tracking-wider px-4 py-2 bg-[var(--primary-light)] rounded-full">
+        Visi & Misi
+      </span>
+    </div>
+    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-6">
+      Visi & Misi <span
+        class="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text text-transparent">
+        SMKN Juara
+      </span>
+    </h2>
+    <div class="w-20 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] rounded-full mx-auto mb-6"></div>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+      Landasan kami dalam mendidik generasi muda agar siap menghadapi tantangan dunia kerja dan masa depan.
+    </p>
+  </div>
 
-        <!-- Cards -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+  <!-- Cards -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
 
-          <!-- Visi Card -->
-          <div
-            class="group relative bg-white rounded-3xl shadow-xl p-10 border-2 border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl overflow-hidden">
-            <!-- Gradient Background on Hover -->
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-
-            <div class="relative z-10">
-              <div class="flex items-center gap-4 mb-6">
-                <div
-                  class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-black text-gray-900">Visi Sekolah</h3>
-              </div>
-
-              <p class="text-gray-700 text-base leading-relaxed text-justify">
-                "Menjadi lembaga pendidikan vokasi unggulan yang menghasilkan tenaga terampil, inovatif, dan berdaya
-                saing di bidang teknologi untuk mendukung pembangunan daerah dan nasional."
-              </p>
-            </div>
-
-            <!-- Decorative Corner -->
-            <div
-              class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-100 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-          </div>
-
-          <!-- Misi Card -->
-          <div
-            class="group relative bg-gradient-to-br from-emerald-600 via-emerald-600 to-green-600 text-white rounded-3xl shadow-xl p-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:from-emerald-700 hover:via-green-600 hover:to-teal-600 overflow-hidden">
-            <!-- Animated Background Pattern -->
-            <div class="absolute inset-0 opacity-10">
-              <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full -translate-y-32 translate-x-32"></div>
-              <div class="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full translate-y-32 -translate-x-32">
-              </div>
-            </div>
-
-            <div class="relative z-10">
-              <div class="flex items-center gap-4 mb-8">
-                <div
-                  class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-white/30 transition-all duration-300">
-                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-black">Misi Sekolah</h3>
-              </div>
-
-              <ul class="space-y-4 text-base">
-                <li class="flex items-start gap-3 group/item">
-                  <svg
-                    class="w-6 h-6 flex-shrink-0 text-white group-hover/item:scale-110 transition-transform duration-300"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="leading-relaxed">Menyelenggarakan pembelajaran berbasis kompetensi dengan standar
-                    industri.</span>
-                </li>
-                <li class="flex items-start gap-3 group/item">
-                  <svg
-                    class="w-6 h-6 flex-shrink-0 text-white group-hover/item:scale-110 transition-transform duration-300"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="leading-relaxed">Mengembangkan laboratorium dan fasilitas praktik modern yang mendukung
-                    keterampilan siswa.</span>
-                </li>
-                <li class="flex items-start gap-3 group/item">
-                  <svg
-                    class="w-6 h-6 flex-shrink-0 text-white group-hover/item:scale-110 transition-transform duration-300"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="leading-relaxed">Menjalin kemitraan strategis dengan dunia usaha, industri, dan perguruan
-                    tinggi.</span>
-                </li>
-                <li class="flex items-start gap-3 group/item">
-                  <svg
-                    class="w-6 h-6 flex-shrink-0 text-white group-hover/item:scale-110 transition-transform duration-300"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="leading-relaxed">Mengembangkan karakter profesional: disiplin, integritas, kreativitas,
-                    dan semangat kewirausahaan.</span>
-                </li>
-                <li class="flex items-start gap-3 group/item">
-                  <svg
-                    class="w-6 h-6 flex-shrink-0 text-white group-hover/item:scale-110 transition-transform duration-300"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="leading-relaxed">Mendorong pembelajaran berbasis proyek, riset terapan, dan praktik kerja
-                    nyata (PKL/magang).</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <!-- Visi Card -->
+    <div
+      class="group relative bg-white rounded-3xl shadow-xl p-10 border-2 border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl overflow-hidden">
+      <!-- Gradient Background on Hover -->
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-[var(--primary-light)] via-white to-[var(--secondary-light)] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
       </div>
+
+      <div class="relative z-10">
+        <div class="flex items-center gap-4 mb-6">
+          <div
+            class="w-14 h-14 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-black text-gray-900">Visi Sekolah</h3>
+        </div>
+
+        <p class="text-gray-700 text-base leading-relaxed text-justify">
+          "Menjadi lembaga pendidikan vokasi unggulan yang menghasilkan tenaga terampil, inovatif, dan berdaya
+          saing di bidang teknologi untuk mendukung pembangunan daerah dan nasional."
+        </p>
+      </div>
+
+      <!-- Decorative Corner -->
+      <div
+        class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[var(--primary-light)] to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
+    </div>
+
+    <!-- Misi Card -->
+    <div
+      class="group relative bg-gradient-to-br from-[var(--primary)] via-[var(--primary)] to-[var(--secondary)] text-white rounded-3xl shadow-xl p-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:from-[var(--secondary)] hover:via-[var(--primary)] hover:to-[var(--secondary)] overflow-hidden">
+      <!-- Animated Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full -translate-y-32 translate-x-32"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full translate-y-32 -translate-x-32"></div>
+      </div>
+
+      <div class="relative z-10">
+        <div class="flex items-center gap-4 mb-8">
+          <div
+            class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-white/30 transition-all duration-300">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-black">Misi Sekolah</h3>
+        </div>
+
+        <ul class="space-y-4 text-base">
+          <li class="flex items-start gap-3 group/item">
+            <svg
+              class="w-6 h-6 flex-shrink-0 text-white group-hover/item:scale-110 transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="leading-relaxed">Menyelenggarakan pembelajaran berbasis kompetensi dengan standar industri.</span>
+          </li>
+          <li class="flex items-start gap-3 group/item">
+            <svg
+              class="w-6 h-6 flex-shrink-0 text-white group-hover/item:scale-110 transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="leading-relaxed">Mengembangkan laboratorium dan fasilitas praktik modern yang mendukung keterampilan siswa.</span>
+          </li>
+          <li class="flex items-start gap-3 group/item">
+            <svg
+              class="w-6 h-6 flex-shrink-0 text-white group-hover/item:scale-110 transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="leading-relaxed">Menjalin kemitraan strategis dengan dunia usaha, industri, dan perguruan tinggi.</span>
+          </li>
+          <li class="flex items-start gap-3 group/item">
+            <svg
+              class="w-6 h-6 flex-shrink-0 text-white group-hover/item:scale-110 transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="leading-relaxed">Mengembangkan karakter profesional: disiplin, integritas, kreativitas, dan semangat kewirausahaan.</span>
+          </li>
+          <li class="flex items-start gap-3 group/item">
+            <svg
+              class="w-6 h-6 flex-shrink-0 text-white group-hover/item:scale-110 transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="leading-relaxed">Mendorong pembelajaran berbasis proyek, riset terapan, dan praktik kerja nyata (PKL/magang).</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     </div>
   </section>
 
   <!-- Kompetensi Keahlian Section -->
-  <section id="kompetensi-keahlian" class="relative py-24 px-6 min-h-screen bg-white overflow-hidden">
-    <!-- Decorative Background Elements -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div
-        class="absolute top-20 right-10 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30">
-      </div>
-      <div
-        class="absolute bottom-20 left-10 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30">
-      </div>
-    </div>
-
-    <div class="relative max-w-6xl mx-auto">
-      <!-- Judul -->
-      <div class="text-center mb-12 sm:mb-16">
-        <div class="inline-block mb-4">
-        </div>
-        <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-6">
-          Kompetensi <span
-            class="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">Keahlian</span>
-        </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full mx-auto mb-6"></div>
-        <p class="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-          Pilihan jurusan yang dirancang untuk membekali siswa dengan keterampilan masa depan
-        </p>
-      </div>
-
-      <!-- Cards -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-
-        <!-- Card PPLG -->
-        <div
-          class="group relative bg-white rounded-3xl overflow-hidden border-2 border-gray-100 shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-emerald-300">
-          <!-- Background Gradient Overlay on Hover -->
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          </div>
-
-          <!-- Image Container -->
-          <div class="relative h-52 sm:h-56 overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
-            <img
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
-              alt="PPLG"
-              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-
-            <!-- Floating Badge -->
-            <div
-              class="absolute top-4 right-4 z-20 bg-emerald-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm">
-              Trending 🔥
-            </div>
-          </div>
-
-          <!-- Content -->
-          <div class="relative p-6 sm:p-8">
-            <!-- Icon Badge -->
-            <div class="flex items-center gap-4 mb-4">
-              <div
-                class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3
-                  class="text-xl sm:text-2xl font-black text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
-                  PPLG
-                </h3>
-                <p class="text-sm text-gray-500 font-medium">Pengembangan Perangkat Lunak & Gim</p>
-              </div>
-            </div>
-
-            <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 text-justify">
-              Membekali siswa dengan kemampuan merancang, membuat, dan mengembangkan aplikasi berbasis desktop, web,
-              maupun mobile. Juga belajar desain dan pengembangan gim sebagai salah satu produk kreatif digital.
-            </p>
-
-            <!-- Features List -->
-            <div class="space-y-2 mb-6">
-              <div class="flex items-center gap-2 text-sm text-gray-700">
-                <span
-                  class="w-5 h-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
-                <span>Pemrograman Web & Mobile</span>
-              </div>
-              <div class="flex items-center gap-2 text-sm text-gray-700">
-                <span
-                  class="w-5 h-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
-                <span>Game Development</span>
-              </div>
-              <div class="flex items-center gap-2 text-sm text-gray-700">
-                <span
-                  class="w-5 h-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
-                <span>UI/UX Design</span>
-              </div>
-            </div>
-
-            <!-- CTA Button -->
-            <a href="jurusan.html"
-              class="group/btn inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <span>Pelajari Lebih Lanjut</span>
-              <svg class="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none"
-                stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Card MPLB -->
-        <div
-          class="group relative bg-white rounded-3xl overflow-hidden border-2 border-gray-100 shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-blue-300">
-          <!-- Background Gradient Overlay on Hover -->
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          </div>
-
-          <!-- Image Container -->
-          <div class="relative h-52 sm:h-56 overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
-            <img
-              src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="MPLB"
-              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-
-            <!-- Floating Badge -->
-            <div
-              class="absolute top-4 right-4 z-20 bg-blue-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm">
-              Popular ⭐
-            </div>
-          </div>
-
-          <!-- Content -->
-          <div class="relative p-6 sm:p-8">
-            <!-- Icon Badge -->
-            <div class="flex items-center gap-4 mb-4">
-              <div
-                class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3
-                  class="text-xl sm:text-2xl font-black text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                  MPLB
-                </h3>
-                <p class="text-sm text-gray-500 font-medium">Manajemen Perkantoran & Layanan Bisnis</p>
-              </div>
-            </div>
-
-            <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 text-justify">
-              Fokus pada administrasi perkantoran, layanan bisnis, dan keterampilan komunikasi profesional. Membekali
-              siswa
-              agar siap bekerja di perkantoran modern dengan dukungan teknologi.
-            </p>
-
-            <!-- Features List -->
-            <div class="space-y-2 mb-6">
-              <div class="flex items-center gap-2 text-sm text-gray-700">
-                <span
-                  class="w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
-                <span>Administrasi Perkantoran</span>
-              </div>
-              <div class="flex items-center gap-2 text-sm text-gray-700">
-                <span
-                  class="w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
-                <span>Komunikasi Bisnis</span>
-              </div>
-              <div class="flex items-center gap-2 text-sm text-gray-700">
-                <span
-                  class="w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
-                <span>Manajemen Layanan</span>
-              </div>
-            </div>
-
-            <!-- CTA Button -->
-            <a href="jurusan.html"
-              class="group/btn inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <span>Pelajari Lebih Lanjut</span>
-              <svg class="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none"
-                stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-      <!-- fasilitas -->
-<section id="fasilitas" class="relative py-24 px-6 bg-white overflow-hidden">
+<section id="kompetensi-keahlian" class="relative py-24 px-6 min-h-screen bg-white overflow-hidden">
   <!-- Decorative Background Elements -->
   <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-20 right-20 w-64 h-64 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
-    <div class="absolute bottom-20 left-20 w-64 h-64 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+    <div
+      class="absolute top-20 right-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+      style="background: var(--primary-light);">
+    </div>
+    <div
+      class="absolute bottom-20 left-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+      style="background: var(--secondary-light);">
+    </div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto">
+    <!-- Judul -->
+    <div class="text-center mb-12 sm:mb-16">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-6">
+        Kompetensi <span
+          class="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text text-transparent">Keahlian</span>
+      </h2>
+      <div class="w-20 h-1 rounded-full mx-auto mb-6"
+        style="background: linear-gradient(to right, var(--primary), var(--secondary));"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+        Pilihan jurusan yang dirancang untuk membekali siswa dengan keterampilan masa depan
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      <!-- Card PPLG -->
+      <div
+        class="group relative bg-white rounded-3xl overflow-hidden border-2 border-gray-100 shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+        style="--hover-border: var(--primary-light);">
+        <!-- Background Gradient Overlay on Hover -->
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          style="background: linear-gradient(to bottom right, var(--primary)10%, var(--secondary)10%);">
+        </div>
+
+        <!-- Image Container -->
+        <div class="relative h-52 sm:h-56 overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+            alt="PPLG"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+
+          <!-- Floating Badge -->
+          <div
+            class="absolute top-4 right-4 z-20 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm"
+            style="background: var(--primary);">
+            Trending 🔥
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative p-6 sm:p-8">
+          <!-- Icon Badge -->
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"
+              style="background: linear-gradient(to bottom right, var(--primary), var(--secondary));">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl sm:text-2xl font-black text-gray-900 group-hover:text-[var(--primary)] transition-colors duration-300">
+                PPLG
+              </h3>
+              <p class="text-sm text-gray-500 font-medium">Pengembangan Perangkat Lunak & Gim</p>
+            </div>
+          </div>
+
+          <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 text-justify">
+            Membekali siswa dengan kemampuan merancang, membuat, dan mengembangkan aplikasi berbasis desktop, web,
+            maupun mobile. Juga belajar desain dan pengembangan gim sebagai salah satu produk kreatif digital.
+          </p>
+
+          <!-- Features List -->
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-700">
+              <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold"
+                style="background: var(--primary-light); color: var(--primary);">✓</span>
+              <span>Pemrograman Web & Mobile</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-700">
+              <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold"
+                style="background: var(--primary-light); color: var(--primary);">✓</span>
+              <span>Game Development</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-700">
+              <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold"
+                style="background: var(--primary-light); color: var(--primary);">✓</span>
+              <span>UI/UX Design</span>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <a href="jurusan.html"
+            class="group/btn inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            style="background: linear-gradient(to right, var(--primary), var(--secondary));">
+            <span>Pelajari Lebih Lanjut</span>
+            <svg class="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card MPLB -->
+<div
+  class="group relative bg-white rounded-3xl overflow-hidden border-2 border-transparent shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--primary)]">
+  
+  <!-- Background Gradient Overlay on Hover -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/5 to-[var(--secondary)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+  </div>
+
+  <!-- Image Container -->
+  <div class="relative h-52 sm:h-56 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+    <img
+      src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      alt="MPLB"
+      class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+
+    <!-- Floating Badge -->
+    <div
+      class="absolute top-4 right-4 z-20 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg"
+      style="background: var(--primary);">
+      Popular ⭐
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative p-6 sm:p-8">
+    <!-- Icon Badge -->
+    <div class="flex items-center gap-4 mb-4">
+      <div
+        class="w-14 h-14 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <div class="flex-1">
+        <h3
+          class="text-xl sm:text-2xl font-black text-[var(--text)] group-hover:text-[var(--primary)] transition-colors duration-300">
+          MPLB
+        </h3>
+        <p class="text-sm text-[var(--secondary)] font-medium">Manajemen Perkantoran & Layanan Bisnis</p>
+      </div>
+    </div>
+
+    <p class="text-[var(--text)] text-sm sm:text-base leading-relaxed mb-6 text-justify">
+      Fokus pada administrasi perkantoran, layanan bisnis, dan keterampilan komunikasi profesional. Membekali
+      siswa agar siap bekerja di perkantoran modern dengan dukungan teknologi.
+    </p>
+
+    <!-- Features List -->
+    <div class="space-y-2 mb-6">
+      <div class="flex items-center gap-2 text-sm text-[var(--text)]">
+        <span
+          class="w-5 h-5 bg-[var(--primary)]/20 text-[var(--primary)] rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
+        <span>Administrasi Perkantoran</span>
+      </div>
+      <div class="flex items-center gap-2 text-sm text-[var(--text)]">
+        <span
+          class="w-5 h-5 bg-[var(--primary)]/20 text-[var(--primary)] rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
+        <span>Komunikasi Bisnis</span>
+      </div>
+      <div class="flex items-center gap-2 text-sm text-[var(--text)]">
+        <span
+          class="w-5 h-5 bg-[var(--primary)]/20 text-[var(--primary)] rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
+        <span>Manajemen Layanan</span>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <a href="jurusan.html"
+      class="group/btn inline-flex items-center gap-2 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] hover:from-[var(--primary)]/90 hover:to-[var(--secondary)]/90 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+      <span>Pelajari Lebih Lanjut</span>
+      <svg class="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none"
+        stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+      <!-- fasilitas -->
+<section id="fasilitas" class="relative py-24 px-6 bg-[var(--background)] overflow-hidden">
+  <!-- Decorative Background -->
+  <div class="absolute inset-0 pointer-events-none opacity-30">
+    <div class="absolute top-20 right-10 w-72 h-72 rounded-full blur-3xl" style="background: var(--primary); opacity: 0.1;"></div>
+    <div class="absolute bottom-20 left-10 w-96 h-96 rounded-full blur-3xl" style="background: var(--secondary); opacity: 0.1;"></div>
   </div>
 
   <div class="relative max-w-7xl mx-auto">
-    <!-- Layout Grid: Title + Content -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
       
-      <!-- Left: Title Section + Featured Image -->
+      <!-- Left: Title Section -->
       <div class="lg:pr-8">
-        <!-- Judul -->
-        <div class="mb-8">
+        <div class="mb-8 text-center lg:text-left">
           <div class="inline-block mb-4">
-            <span class="text-emerald-600 text-sm font-semibold uppercase tracking-wider px-4 py-2 bg-emerald-50 rounded-full border border-emerald-200">Fasilitas Unggulan</span>
+            <span 
+              class="text-sm font-semibold uppercase tracking-wider px-4 py-2 rounded-full border-2 shadow-md" 
+              style="color: var(--primary); background: var(--secondary); border-color: var(--primary);">
+              Fasilitas Unggulan
+            </span>
           </div>
-          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-4">
-            Fasilitas <span class="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">SMKN Juara</span>
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-4"
+              style="color: var(--text);">
+            Fasilitas <span class="bg-clip-text text-transparent bg-gradient-to-r"
+              style="background-image: linear-gradient(to right, var(--primary), var(--secondary));">
+              SMKN Juara
+            </span>
           </h2>
-          <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full mb-6"></div>
-          <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+          <div class="w-24 h-1.5 rounded-full mx-auto lg:mx-0 mb-6 shadow-lg" 
+               style="background: linear-gradient(to right, var(--primary), var(--secondary));"></div>
+          <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text); opacity:0.85;">
             Kami menyediakan fasilitas terbaik untuk mendukung pembelajaran dan pengembangan siswa di era modern.
           </p>
         </div>
 
         <!-- Featured Image -->
         <div class="relative group mt-8">
-          <div class="absolute -inset-4 bg-gradient-to-br from-emerald-400 to-green-500 rounded-3xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-500"></div>
-          
-          <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+          <div class="absolute -inset-4 rounded-3xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-500"
+               style="background: linear-gradient(to bottom right, var(--primary), var(--secondary));"></div>
+          <div class="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-white">
             <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80" 
                  alt="Fasilitas Sekolah" 
                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-            
-            <!-- Overlay Content -->
             <div class="absolute bottom-8 left-8 right-8 text-white z-10">
               <h3 class="text-2xl sm:text-3xl font-black mb-3">Lingkungan Belajar Modern</h3>
               <p class="text-sm sm:text-base text-white/90 leading-relaxed">
                 Fasilitas lengkap dan modern untuk mendukung proses pembelajaran yang berkualitas dan menyenangkan.
               </p>
             </div>
-
-            <!-- Floating Badge -->
-            <div class="absolute top-6 right-6 bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-xl backdrop-blur-sm">
+            <div class="absolute top-6 right-6 text-white px-4 py-2 rounded-full text-sm font-bold shadow-2xl backdrop-blur-sm"
+                 style="background: linear-gradient(to right, var(--primary), var(--secondary));">
               8+ Fasilitas
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Right: Cards Grid (2x4) -->
+      <!-- Right: Cards Grid -->
       <div class="grid grid-cols-2 gap-4 sm:gap-5">
-        
-        <!-- Card 1 - Ruang Kelas -->
-        <div class="group relative bg-white rounded-2xl border-2 border-gray-100 p-5 transition-all duration-300 hover:border-emerald-400 hover:shadow-xl hover:-translate-y-2">
-          <div class="absolute inset-0 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <!-- Card 1: Ruang Kelas -->
+        <div class="group relative bg-white rounded-2xl border-2 border-gray-200 p-5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--primary)] overflow-hidden">
+          <div class="absolute top-0 right-0 w-20 h-20 rounded-full blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+               style="background: var(--primary);"></div>
           <div class="relative z-10 text-center">
-            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-3 transition-all duration-300 group-hover:bg-white/20 group-hover:text-white group-hover:scale-110">
-              <iconify-icon icon="mdi:teach" class="text-2xl"></iconify-icon>
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500"
+                 style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+              <iconify-icon icon="mdi:teach" class="text-3xl text-white"></iconify-icon>
             </div>
-            <h3 class="text-sm font-bold text-gray-900 mb-1 transition-colors duration-300 group-hover:text-white">Ruang Kelas</h3>
-            <p class="text-xs text-gray-600 transition-colors duration-300 group-hover:text-white/90">40+ ruang nyaman dengan multimedia</p>
+            <h3 class="text-base font-black mb-2 group-hover:text-[var(--primary)] transition-colors" style="color: var(--text);">Ruang Kelas</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text); opacity:0.7;">40+ ruang nyaman dengan multimedia</p>
           </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+               style="background: linear-gradient(to right, var(--primary), var(--secondary));"></div>
         </div>
 
-        <!-- Card 2 - Perpustakaan -->
-        <div class="group relative bg-white rounded-2xl border-2 border-gray-100 p-5 transition-all duration-300 hover:border-indigo-400 hover:shadow-xl hover:-translate-y-2">
-          <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <!-- Card 2: Perpustakaan -->
+        <div class="group relative bg-white rounded-2xl border-2 border-gray-200 p-5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--primary)] overflow-hidden">
+          <div class="absolute top-0 right-0 w-20 h-20 rounded-full blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+               style="background: var(--secondary);"></div>
           <div class="relative z-10 text-center">
-            <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center mx-auto mb-3 transition-all duration-300 group-hover:bg-white/20 group-hover:text-white group-hover:scale-110">
-              <iconify-icon icon="mdi:book-open-variant" class="text-2xl"></iconify-icon>
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500"
+                 style="background: linear-gradient(135deg, var(--secondary), var(--primary));">
+              <iconify-icon icon="mdi:book-open-variant" class="text-3xl text-white"></iconify-icon>
             </div>
-            <h3 class="text-sm font-bold text-gray-900 mb-1 transition-colors duration-300 group-hover:text-white">Perpustakaan</h3>
-            <p class="text-xs text-gray-600 transition-colors duration-300 group-hover:text-white/90">Ribuan koleksi digital & fisik</p>
+            <h3 class="text-base font-black mb-2 group-hover:text-[var(--primary)] transition-colors" style="color: var(--text);">Perpustakaan</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text); opacity:0.7;">Ribuan koleksi digital & fisik</p>
           </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+               style="background: linear-gradient(to right, var(--secondary), var(--primary));"></div>
         </div>
 
-        <!-- Card 3 - Laboratorium -->
-        <div class="group relative bg-white rounded-2xl border-2 border-gray-100 p-5 transition-all duration-300 hover:border-pink-400 hover:shadow-xl hover:-translate-y-2">
-          <div class="absolute inset-0 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <!-- Card 3: Laboratorium -->
+        <div class="group relative bg-white rounded-2xl border-2 border-gray-200 p-5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--primary)] overflow-hidden">
+          <div class="absolute top-0 right-0 w-20 h-20 rounded-full blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+               style="background: var(--primary);"></div>
           <div class="relative z-10 text-center">
-            <div class="w-12 h-12 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center mx-auto mb-3 transition-all duration-300 group-hover:bg-white/20 group-hover:text-white group-hover:scale-110">
-              <iconify-icon icon="mdi:flask" class="text-2xl"></iconify-icon>
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500"
+                 style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+              <iconify-icon icon="mdi:flask" class="text-3xl text-white"></iconify-icon>
             </div>
-            <h3 class="text-sm font-bold text-gray-900 mb-1 transition-colors duration-300 group-hover:text-white">Laboratorium</h3>
-            <p class="text-xs text-gray-600 transition-colors duration-300 group-hover:text-white/90">Lab modern & lengkap</p>
+            <h3 class="text-base font-black mb-2 group-hover:text-[var(--primary)] transition-colors" style="color: var(--text);">Laboratorium</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text); opacity:0.7;">Lab komputer, sains, & bahasa modern</p>
           </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+               style="background: linear-gradient(to right, var(--primary), var(--secondary));"></div>
         </div>
 
-        <!-- Card 4 - Olahraga -->
-        <div class="group relative bg-white rounded-2xl border-2 border-gray-100 p-5 transition-all duration-300 hover:border-yellow-400 hover:shadow-xl hover:-translate-y-2">
-          <div class="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <!-- Card 4: Lapangan Olahraga -->
+        <div class="group relative bg-white rounded-2xl border-2 border-gray-200 p-5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--primary)] overflow-hidden">
+          <div class="absolute top-0 right-0 w-20 h-20 rounded-full blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+               style="background: var(--secondary);"></div>
           <div class="relative z-10 text-center">
-            <div class="w-12 h-12 rounded-xl bg-yellow-100 text-yellow-600 flex items-center justify-center mx-auto mb-3 transition-all duration-300 group-hover:bg-white/20 group-hover:text-white group-hover:scale-110">
-              <iconify-icon icon="mdi:basketball" class="text-2xl"></iconify-icon>
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500"
+                 style="background: linear-gradient(135deg, var(--secondary), var(--primary));">
+              <iconify-icon icon="mdi:soccer" class="text-3xl text-white"></iconify-icon>
             </div>
-            <h3 class="text-sm font-bold text-gray-900 mb-1 transition-colors duration-300 group-hover:text-white">Olahraga</h3>
-            <p class="text-xs text-gray-600 transition-colors duration-300 group-hover:text-white/90">Lapangan lengkap</p>
+            <h3 class="text-base font-black mb-2 group-hover:text-[var(--primary)] transition-colors" style="color: var(--text);">Lapangan Olahraga</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text); opacity:0.7;">Futsal, basket, voli, & bulutangkis</p>
           </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+               style="background: linear-gradient(to right, var(--secondary), var(--primary));"></div>
         </div>
 
-        <!-- Card 5 - Lab Komputer -->
-        <div class="group relative bg-white rounded-2xl border-2 border-gray-100 p-5 transition-all duration-300 hover:border-teal-400 hover:shadow-xl hover:-translate-y-2">
-          <div class="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <!-- Card 5: Aula Serbaguna -->
+        <div class="group relative bg-white rounded-2xl border-2 border-gray-200 p-5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--primary)] overflow-hidden">
+          <div class="absolute top-0 right-0 w-20 h-20 rounded-full blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+               style="background: var(--primary);"></div>
           <div class="relative z-10 text-center">
-            <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center mx-auto mb-3 transition-all duration-300 group-hover:bg-white/20 group-hover:text-white group-hover:scale-110">
-              <iconify-icon icon="mdi:laptop" class="text-2xl"></iconify-icon>
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500"
+                 style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+              <iconify-icon icon="mdi:account-group" class="text-3xl text-white"></iconify-icon>
             </div>
-            <h3 class="text-sm font-bold text-gray-900 mb-1 transition-colors duration-300 group-hover:text-white">Lab Komputer</h3>
-            <p class="text-xs text-gray-600 transition-colors duration-300 group-hover:text-white/90">PC modern & internet cepat</p>
+            <h3 class="text-base font-black mb-2 group-hover:text-[var(--primary)] transition-colors" style="color: var(--text);">Aula Serbaguna</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text); opacity:0.7;">Ruang kegiatan & acara sekolah</p>
           </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+               style="background: linear-gradient(to right, var(--primary), var(--secondary));"></div>
         </div>
 
-        <!-- Card 6 - Workshop -->
-        <div class="group relative bg-white rounded-2xl border-2 border-gray-100 p-5 transition-all duration-300 hover:border-gray-400 hover:shadow-xl hover:-translate-y-2">
-          <div class="absolute inset-0 bg-gradient-to-br from-gray-600 to-gray-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <!-- Card 6: Studio Kreatif -->
+        <div class="group relative bg-white rounded-2xl border-2 border-gray-200 p-5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--primary)] overflow-hidden">
+          <div class="absolute top-0 right-0 w-20 h-20 rounded-full blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+               style="background: var(--secondary);"></div>
           <div class="relative z-10 text-center">
-            <div class="w-12 h-12 rounded-xl bg-gray-100 text-gray-600 flex items-center justify-center mx-auto mb-3 transition-all duration-300 group-hover:bg-white/20 group-hover:text-white group-hover:scale-110">
-              <iconify-icon icon="mdi:tools" class="text-2xl"></iconify-icon>
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500"
+                 style="background: linear-gradient(135deg, var(--secondary), var(--primary));">
+              <iconify-icon icon="mdi:palette" class="text-3xl text-white"></iconify-icon>
             </div>
-            <h3 class="text-sm font-bold text-gray-900 mb-1 transition-colors duration-300 group-hover:text-white">Workshop</h3>
-            <p class="text-xs text-gray-600 transition-colors duration-300 group-hover:text-white/90">Bengkel praktik teknik</p>
+            <h3 class="text-base font-black mb-2 group-hover:text-[var(--primary)] transition-colors" style="color: var(--text);">Studio Kreatif</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text); opacity:0.7;">Desain grafis, musik, & fotografi</p>
           </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+               style="background: linear-gradient(to right, var(--secondary), var(--primary));"></div>
         </div>
 
-        <!-- Card 7 - Seni & Musik -->
-        <div class="group relative bg-white rounded-2xl border-2 border-gray-100 p-5 transition-all duration-300 hover:border-purple-400 hover:shadow-xl hover:-translate-y-2">
-          <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <!-- Card 7: Kantin -->
+        <div class="group relative bg-white rounded-2xl border-2 border-gray-200 p-5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--primary)] overflow-hidden">
+          <div class="absolute top-0 right-0 w-20 h-20 rounded-full blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+               style="background: var(--primary);"></div>
           <div class="relative z-10 text-center">
-            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mx-auto mb-3 transition-all duration-300 group-hover:bg-white/20 group-hover:text-white group-hover:scale-110">
-              <iconify-icon icon="mdi:music" class="text-2xl"></iconify-icon>
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500"
+                 style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+              <iconify-icon icon="mdi:food" class="text-3xl text-white"></iconify-icon>
             </div>
-            <h3 class="text-sm font-bold text-gray-900 mb-1 transition-colors duration-300 group-hover:text-white">Seni & Musik</h3>
-            <p class="text-xs text-gray-600 transition-colors duration-300 group-hover:text-white/90">Studio kreatif</p>
+            <h3 class="text-base font-black mb-2 group-hover:text-[var(--primary)] transition-colors" style="color: var(--text);">Kantin</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text); opacity:0.7;">Makanan sehat & harga terjangkau</p>
           </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+               style="background: linear-gradient(to right, var(--primary), var(--secondary));"></div>
         </div>
 
-        <!-- Card 8 - More -->
-        <div class="group relative bg-gradient-to-br from-emerald-600 to-green-600 rounded-2xl border-2 border-emerald-500 p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:from-emerald-700 hover:to-green-700">
+        <!-- Card 8: Area Wi-Fi -->
+        <div class="group relative bg-white rounded-2xl border-2 border-gray-200 p-5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--primary)] overflow-hidden">
+          <div class="absolute top-0 right-0 w-20 h-20 rounded-full blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+               style="background: var(--secondary);"></div>
           <div class="relative z-10 text-center">
-            <div class="w-12 h-12 rounded-xl bg-white/20 text-white flex items-center justify-center mx-auto mb-3 transition-all duration-300 group-hover:bg-white/30 group-hover:scale-110">
-              <iconify-icon icon="mdi:plus-circle" class="text-2xl"></iconify-icon>
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500"
+                 style="background: linear-gradient(135deg, var(--secondary), var(--primary));">
+              <iconify-icon icon="mdi:wifi" class="text-3xl text-white"></iconify-icon>
             </div>
-            <h3 class="text-sm font-bold text-white mb-1">+5 Lainnya</h3>
-            <p class="text-xs text-white/90">Fasilitas lengkap</p>
+            <h3 class="text-base font-black mb-2 group-hover:text-[var(--primary)] transition-colors" style="color: var(--text);">Area Wi-Fi</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text); opacity:0.7;">Akses internet cepat di seluruh area</p>
           </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+               style="background: linear-gradient(to right, var(--secondary), var(--primary));"></div>
         </div>
       </div>
     </div>
@@ -807,560 +995,467 @@
 </section>
 
   <!-- News & Events Section -->
-  <section id="berita"
-    class="relative py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 via-white to-emerald-50 overflow-hidden">
-    <!-- Decorative Background Elements -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div
-        class="absolute top-32 right-20 w-96 h-96 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20">
+<section id="berita"
+  class="relative py-16 sm:py-20 px-4 sm:px-6 bg-white overflow-hidden">
+
+  <div class="relative max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12 sm:mb-16">
+      <div class="inline-block mb-4">
+        <span
+          class="font-semibold uppercase tracking-wider px-4 py-2 rounded-full border text-sm bg-gray-100 text-gray-700 border-gray-300">
+          Update Terkini
+        </span>
       </div>
-      <div
-        class="absolute bottom-32 left-20 w-96 h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20">
-      </div>
+      <h2
+        class="text-4xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight text-gray-900">
+        Berita & <span class="text-gray-900" style="
+        color: var(--primary);">Kegiatan</span>
+      </h2>
+      <div class="w-20 h-1 rounded-full mx-auto mb-6 bg-gray-300"></div>
+      <p class="text-base sm:text-lg max-w-2xl mx-auto text-gray-600">
+        Berita & Kegiatan terbaru dari sekolah
+      </p>
     </div>
 
-    <div class="relative max-w-7xl mx-auto">
-      <!-- Header -->
-      <div class="text-center mb-12 sm:mb-16">
-        <div class="inline-block mb-4">
-          <span
-            class="text-emerald-600 text-sm font-semibold uppercase tracking-wider px-4 py-2 bg-emerald-50 rounded-full border border-emerald-200">Update
-            Terkini</span>
-        </div>
-        <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 mb-6">
-          Berita & <span
-            class="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">Kegiatan</span>
-        </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full mx-auto mb-6"></div>
-        <p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">Berita & Kegiatan terbaru dari sekolah</p>
-      </div>
+    <!-- News Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
 
-      <!-- News Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+      <!-- Main Featured News -->
+      <article class="lg:col-span-2 group">
+        <div
+          class="relative rounded-3xl shadow-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:border-[var(--secondary)] bg-white">
 
-        <!-- Main Featured News -->
-        <article class="lg:col-span-2 group">
+          <!-- Background Gradient Overlay -->
           <div
-            class="relative bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-gray-100 transition-all duration-500 hover:shadow-2xl hover:border-emerald-300 hover:-translate-y-2">
-            <!-- Background Gradient Overlay -->
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            style="background: linear-gradient(to bottom right, var(--primary)/0.05, var(--secondary)/0.05);">
+          </div>
+
+          <!-- Featured Image -->
+          <div class="relative h-56 sm:h-72 md:h-96 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80"
+              alt="Featured news"
+              class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+
+            <!-- Floating Badge -->
+            <div class="absolute top-6 left-6 z-20">
+              <span
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full font-bold text-sm shadow-xl backdrop-blur-sm bg-gray-800 text-white group-hover:bg-gradient-to-r transition-all duration-500"
+                style="--tw-gradient-from: var(--primary); --tw-gradient-to: var(--secondary);">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                </span>
+                Featured
+              </span>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="relative p-6 sm:p-8">
+            <!-- Meta Info -->
+            <div class="flex flex-wrap items-center gap-4 mb-5 text-sm text-gray-600">
+              <span class="inline-flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-gray-100 group-hover:bg-[var(--secondary)] transition-colors duration-300">
+                  <svg class="w-4 h-4 text-gray-600 group-hover:text-[var(--primary)] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                  </svg>
+                </div>
+                <span class="font-medium">17 Sep 2025</span>
+              </span>
+              <span class="inline-flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-gray-100 group-hover:bg-[var(--secondary)] transition-colors duration-300">
+                  <svg class="w-4 h-4 text-gray-600 group-hover:text-[var(--primary)] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                  </svg>
+                </div>
+                <span class="font-medium">Admin</span>
+              </span>
             </div>
 
-            <!-- Featured Image -->
-            <div class="relative h-56 sm:h-72 md:h-96 overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
-              <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80"
-                alt="Featured news"
-                class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-
-              <!-- Floating Badge -->
-              <div class="absolute top-6 left-6 z-20">
-                <span
-                  class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-xl backdrop-blur-sm">
-                  <span class="relative flex h-2 w-2">
-                    <span
-                      class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-                  </span>
-                  Featured
-                </span>
-              </div>
-            </div>
-
-            <!-- Content -->
-            <div class="relative p-6 sm:p-8">
-              <!-- Meta Info -->
-              <div class="flex flex-wrap items-center gap-4 mb-5">
-                <span class="inline-flex items-center gap-2 text-sm text-gray-600">
-                  <div class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center">
-                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                      </path>
-                    </svg>
-                  </div>
-                  <span class="font-medium">17 Sep 2025</span>
-                </span>
-                <span class="inline-flex items-center gap-2 text-sm text-gray-600">
-                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                    </svg>
-                  </div>
-                  <span class="font-medium">Admin</span>
-                </span>
-              </div>
-
-              <!-- Title -->
-              <h3
-                class="text-2xl sm:text-3xl font-black text-gray-900 mb-4 leading-tight group-hover:text-emerald-600 transition-colors duration-300">
+            <!-- Title -->
+            <h3
+              class="text-2xl sm:text-3xl font-black mb-4 leading-tight transition-all duration-300 text-gray-900">
+              <span class="group-hover:bg-gradient-to-r group-hover:from-[var(--primary)] group-hover:to-[var(--secondary)] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                 Pentingnya Lingkungan Belajar yang Nyaman di Sekolah
-              </h3>
+              </span>
+            </h3>
 
-              <!-- Excerpt -->
-              <p class="text-gray-600 text-base leading-relaxed mb-6">
-                Sekolah bukan hanya tempat untuk mendapatkan ilmu pengetahuan, tetapi juga ruang tumbuh bagi siswa dalam
-                mengembangkan karakter, keterampilan, dan kreativitas. Lingkungan belajar yang nyaman memiliki peran
-                besar
-                dalam mendukung semua...
+            <!-- Excerpt -->
+            <p class="text-base leading-relaxed mb-6 text-gray-600">
+              Sekolah bukan hanya tempat untuk mendapatkan ilmu pengetahuan, tetapi juga ruang tumbuh bagi siswa...
+            </p>
+
+            <!-- Read More Button -->
+            <a href="artikel.html"
+              class="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-gray-800 text-white hover:bg-gradient-to-r"
+              style="--tw-gradient-from: var(--primary); --tw-gradient-to: var(--secondary);">
+              <span>Selengkapnya</span>
+              <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sidebar News (3 items) -->
+      <div class="space-y-5">
+        <!-- Item 1 -->
+        <article
+          class="group relative rounded-2xl shadow-lg overflow-hidden border-2 border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[var(--secondary)] bg-white">
+          <div class="flex gap-4 p-4">
+            <div class="relative w-28 h-28 flex-shrink-0 overflow-hidden rounded-xl">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
+                alt="News 1"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 text-xs mb-2 text-gray-600">
+                <svg class="w-3.5 h-3.5 text-gray-500 group-hover:text-[var(--primary)] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span class="font-medium">15 Sep 2025</span>
+              </div>
+              <h5 class="font-bold mb-2 leading-tight text-sm transition-all duration-300 line-clamp-2 text-gray-900">
+                <span class="group-hover:bg-gradient-to-r group-hover:from-[var(--primary)] group-hover:to-[var(--secondary)] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  Program Literasi Digital untuk Siswa Kelas X
+                </span>
+              </h5>
+              <p class="text-xs leading-relaxed mb-3 line-clamp-2 text-gray-600">
+                Implementasi program baru untuk meningkatkan kemampuan digital siswa...
               </p>
-
-              <!-- Read More Button -->
               <a href="artikel.html"
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <span>Selengkapnya</span>
-                <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                  </path>
+                class="inline-flex items-center gap-1 font-semibold text-xs hover:gap-2 transition-all duration-300 text-gray-700 hover:text-[var(--primary)]">
+                <span>Baca</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Sidebar News -->
-        <div class="space-y-5">
-          <!-- News Item 1 -->
-          <article
-            class="group relative bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-emerald-300 hover:-translate-y-1">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <!-- Item 2 -->
+        <article
+          class="group relative rounded-2xl shadow-lg overflow-hidden border-2 border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[var(--secondary)] bg-white">
+          <div class="flex gap-4 p-4">
+            <div class="relative w-28 h-28 flex-shrink-0 overflow-hidden rounded-xl">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+              <img src="https://images.unsplash.com/photo-1584697964403-0fbf8248b3fb?auto=format&fit=crop&w=800&q=80"
+                alt="News 2"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
             </div>
-
-            <div class="flex gap-4 p-4">
-              <!-- Thumbnail -->
-              <div class="relative w-28 h-28 flex-shrink-0 overflow-hidden rounded-xl">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
-                  alt="News 1"
-                  class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 text-xs mb-2 text-gray-600">
+                <svg class="w-3.5 h-3.5 text-gray-500 group-hover:text-[var(--primary)] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span class="font-medium">12 Sep 2025</span>
               </div>
-
-              <!-- Content -->
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                  <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                  </svg>
-                  <span class="font-medium">15 Sep 2025</span>
-                </div>
-                <h5
-                  class="font-bold text-gray-900 mb-2 leading-tight text-sm group-hover:text-emerald-600 transition-colors line-clamp-2">
-                  Program Literasi Digital untuk Siswa Kelas X
-                </h5>
-                <p class="text-gray-600 text-xs leading-relaxed mb-3 line-clamp-2">
-                  Implementasi program baru untuk meningkatkan kemampuan digital siswa...
-                </p>
-                <a href="artikel.html"
-                  class="inline-flex items-center gap-1 text-emerald-600 font-semibold text-xs hover:gap-2 transition-all duration-300">
-                  <span>Baca</span>
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
+              <h5 class="font-bold mb-2 leading-tight text-sm transition-all duration-300 line-clamp-2 text-gray-900">
+                <span class="group-hover:bg-gradient-to-r group-hover:from-[var(--primary)] group-hover:to-[var(--secondary)] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  Workshop Desain Grafis untuk Siswa Multimedia
+                </span>
+              </h5>
+              <p class="text-xs leading-relaxed mb-3 line-clamp-2 text-gray-600">
+                Siswa jurusan multimedia mengikuti workshop desain grafis modern...
+              </p>
+              <a href="artikel.html"
+                class="inline-flex items-center gap-1 font-semibold text-xs hover:gap-2 transition-all duration-300 text-gray-700 hover:text-[var(--primary)]">
+                <span>Baca</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
             </div>
-          </article>
+          </div>
+        </article>
 
-          <!-- News Item 2 -->
-          <article
-            class="group relative bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-blue-300 hover:-translate-y-1">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <!-- Item 3 -->
+        <article
+          class="group relative rounded-2xl shadow-lg overflow-hidden border-2 border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[var(--secondary)] bg-white">
+          <div class="flex gap-4 p-4">
+            <div class="relative w-28 h-28 flex-shrink-0 overflow-hidden rounded-xl">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+                alt="News 3"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
             </div>
-
-            <div class="flex gap-4 p-4">
-              <!-- Thumbnail -->
-              <div class="relative w-28 h-28 flex-shrink-0 overflow-hidden rounded-xl">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
-                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80"
-                  alt="News 2"
-                  class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 text-xs mb-2 text-gray-600">
+                <svg class="w-3.5 h-3.5 text-gray-500 group-hover:text-[var(--primary)] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span class="font-medium">10 Sep 2025</span>
               </div>
-
-              <!-- Content -->
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                  <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                  </svg>
-                  <span class="font-medium">12 Sep 2025</span>
-                </div>
-                <h5
-                  class="font-bold text-gray-900 mb-2 leading-tight text-sm group-hover:text-blue-600 transition-colors line-clamp-2">
-                  Kompetisi Sains Nasional 2025
-                </h5>
-                <p class="text-gray-600 text-xs leading-relaxed mb-3 line-clamp-2">
-                  Tim siswa meraih prestasi gemilang dalam kompetisi sains tingkat nasional...
-                </p>
-                <a href="artikel.html"
-                  class="inline-flex items-center gap-1 text-blue-600 font-semibold text-xs hover:gap-2 transition-all duration-300">
-                  <span>Baca</span>
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
+              <h5 class="font-bold mb-2 leading-tight text-sm transition-all duration-300 line-clamp-2 text-gray-900">
+                <span class="group-hover:bg-gradient-to-r group-hover:from-[var(--primary)] group-hover:to-[var(--secondary)] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  Kegiatan Ekstrakurikuler Pramuka di Akhir Pekan
+                </span>
+              </h5>
+              <p class="text-xs leading-relaxed mb-3 line-clamp-2 text-gray-600">
+                Ekstrakurikuler pramuka kembali aktif dengan kegiatan outbond seru...
+              </p>
+              <a href="artikel.html"
+                class="inline-flex items-center gap-1 font-semibold text-xs hover:gap-2 transition-all duration-300 text-gray-700 hover:text-[var(--primary)]">
+                <span>Baca</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
             </div>
-          </article>
-
-          <!-- News Item 3 -->
-          <article
-            class="group relative bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-purple-300 hover:-translate-y-1">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            </div>
-
-            <div class="flex gap-4 p-4">
-              <!-- Thumbnail -->
-              <div class="relative w-28 h-28 flex-shrink-0 overflow-hidden rounded-xl">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
-                <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80"
-                  alt="News 3"
-                  class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
-              </div>
-
-              <!-- Content -->
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                  <svg class="w-3.5 h-3.5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                  </svg>
-                  <span class="font-medium">10 Sep 2025</span>
-                </div>
-                <h5
-                  class="font-bold text-gray-900 mb-2 leading-tight text-sm group-hover:text-purple-600 transition-colors line-clamp-2">
-                  Workshop Pengembangan Karakter Siswa
-                </h5>
-                <p class="text-gray-600 text-xs leading-relaxed mb-3 line-clamp-2">
-                  Kegiatan pengembangan soft skills dan karakter untuk persiapan masa depan...
-                </p>
-                <a href="artikel.html"
-                  class="inline-flex items-center gap-1 text-purple-600 font-semibold text-xs hover:gap-2 transition-all duration-300">
-                  <span>Baca</span>
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
 
   <!-- Kontak Section -->
-  <section id="kontak" class="relative py-24 px-6 min-h-screen bg-white overflow-hidden">
-    <!-- Enhanced Background Elements -->
-    <div class="absolute inset-0">
-      <!-- Floating orbs -->
-      <div
-        class="absolute top-20 left-10 w-32 h-32 bg-emerald-300 rounded-full mix-blend-multiply filter blur-xl opacity-40">
-      </div>
-      <div
-        class="absolute top-40 right-20 w-24 h-24 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-30">
-      </div>
-      <div
-        class="absolute bottom-32 left-1/4 w-40 h-40 bg-emerald-200 rounded-full mix-blend-multiply filter blur-2xl opacity-25">
-      </div>
+<section id="kontak" class="relative py-24 px-6 min-h-screen bg-[var(--background)] overflow-hidden">
 
-      <!-- Gradient mesh background -->
-      <div class="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-100/20 to-transparent opacity-50">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-green-100/30 to-transparent opacity-30"></div>
+  <!-- Decorative Shapes -->
+  <div class="absolute top-16 right-16 w-20 h-20 border-2 rounded-lg rotate-12 opacity-20" style="border-color: var(--primary);"></div>
+  <div class="absolute bottom-20 left-20 w-16 h-16 rounded-full opacity-20" style="background-color: var(--secondary);"></div>
+
+  <div class="relative max-w-7xl mx-auto">
+    <!-- Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-5xl md:text-6xl font-black leading-tight">
+        <span class="bg-gradient-to-r bg-clip-text text-transparent" style="background-image: linear-gradient(to right, var(--primary), var(--secondary));">
+          Hubungi
+        </span>
+        <span class="relative inline-block" style="color: var(--primary);">
+          Kami
+          <div class="absolute -bottom-2 left-0 w-full h-1 rounded-full" style="background: linear-gradient(to right, var(--primary), var(--secondary));"></div>
+        </span>
+      </h2>
     </div>
 
-    <!-- Decorative geometric shapes -->
-    <div class="absolute top-16 right-16 w-20 h-20 border-2 border-emerald-300/40 rounded-lg rotate-12"></div>
-    <div class="absolute bottom-20 left-20 w-16 h-16 bg-emerald-400/20 rounded-full"></div>
-
-    <div class="relative max-w-7xl mx-auto">
-      <!-- Title Section -->
-      <div class="text-center mb-16">
-        <h2
-          class="text-5xl md:text-6xl font-black bg-gradient-to-r from-emerald-700 via-emerald-600 to-green-600 bg-clip-text text-transparent leading-tight">
-          Hubungi <span class="relative inline-block">
-            <span class="text-emerald-500">Kami</span>
-            <div
-              class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full">
-            </div>
-          </span>
-        </h2>
-      </div>
-
-      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
-        <!-- Left Content - Contact Info & Form -->
-        <div class="space-y-8">
-          <!-- Contact Cards -->
-          <div class="space-y-4">
-            <!-- Alamat -->
-            <div
-              class="flex items-start space-x-4 bg-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div class="relative flex-shrink-0">
-                <div
-                  class="w-12 h-12 bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 text-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-emerald-400/50 transition-all duration-300 group-hover:scale-110">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path d="M12 21s-6-5.686-6-10A6 6 0 0 1 18 11c0 4.314-6 10-6 10z" />
-                    <circle cx="12" cy="11" r="2" />
-                  </svg>
-                </div>
-                <div
-                  class="absolute -inset-2 bg-emerald-400 rounded-xl opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-300">
-                </div>
-              </div>
-              <div class="flex-1 min-w-0">
-                <h4 class="font-semibold text-emerald-800 text-base mb-1">Alamat</h4>
-                <p class="text-gray-700 text-sm leading-relaxed">Jl. Pendidikan No. 45, Bandung, Jawa Barat</p>
-              </div>
-            </div>
-
-            <!-- Telepon -->
-            <div
-              class="flex items-start space-x-4 bg-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div class="relative flex-shrink-0">
-                <div
-                  class="w-12 h-12 bg-gradient-to-br from-green-400 via-green-500 to-emerald-600 text-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-green-400/50 transition-all duration-300 group-hover:scale-110">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path
-                      d="M22 16.92V21a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a2 2 0 0 1 2 1.72c.12.81.37 1.6.73 2.34a2 2 0 0 1-.45 2.11L10 10a16 16 0 0 0 4 4l1.83-1.37a2 2 0 0 1 2.11-.45c.74.36 1.53.61 2.34.73a2 2 0 0 1 1.72 2.01z" />
-                  </svg>
-                </div>
-                <div
-                  class="absolute -inset-2 bg-green-400 rounded-xl opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-300">
-                </div>
-              </div>
-              <div class="flex-1 min-w-0">
-                <h4 class="font-semibold text-emerald-800 text-base mb-1">Telepon</h4>
-                <p class="text-gray-700 text-sm leading-relaxed">+62 812-3456-7890</p>
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div
-              class="flex items-start space-x-4 bg-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div class="relative flex-shrink-0">
-                <div
-                  class="w-12 h-12 bg-gradient-to-br from-teal-400 via-emerald-500 to-green-600 text-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-teal-400/50 transition-all duration-300 group-hover:scale-110">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <rect width="20" height="16" x="2" y="4" rx="2" />
-                    <path d="m22 7-10 5L2 7" />
-                  </svg>
-                </div>
-                <div
-                  class="absolute -inset-2 bg-teal-400 rounded-xl opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-300">
-                </div>
-              </div>
-              <div class="flex-1 min-w-0">
-                <h4 class="font-semibold text-emerald-800 text-base mb-1">Email</h4>
-                <p class="text-gray-700 text-sm leading-relaxed">info@smkjuara.sch.id</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Contact Form -->
-          <div class="relative">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-white/40 via-emerald-50/60 to-green-50/40 rounded-3xl blur-3xl">
-            </div>
-
-            <div class="relative bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-emerald-100">
-              <h3
-                class="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-green-600 bg-clip-text text-transparent mb-6 flex items-center">
-                <svg class="w-7 h-7 text-emerald-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+      <!-- Left: Contact Info + Form -->
+      <div class="space-y-8">
+        <!-- Cards -->
+        <div class="space-y-4">
+          <!-- Alamat -->
+          <div class="flex items-start space-x-4 bg-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div class="relative flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br text-white rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300" style="background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path d="M12 21s-6-5.686-6-10A6 6 0 0 1 18 11c0 4.314-6 10-6 10z" />
+                  <circle cx="12" cy="11" r="2" />
                 </svg>
-                Kirim Pesan
-              </h3>
-
-              <form action="#" method="POST" class="space-y-5">
-                <div class="space-y-2">
-                  <label for="name" class="block text-sm font-semibold text-gray-800">Nama Lengkap</label>
-                  <input type="text" id="name" name="name"
-                    class="w-full px-4 py-3 rounded-xl bg-white border border-emerald-200 focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 outline-none transition-all duration-300 text-gray-800 placeholder-gray-400 text-sm"
-                    placeholder="Masukkan nama lengkap Anda">
-                </div>
-
-                <div class="space-y-2">
-                  <label for="email" class="block text-sm font-semibold text-gray-800">Email</label>
-                  <input type="email" id="email" name="email"
-                    class="w-full px-4 py-3 rounded-xl bg-white border border-emerald-200 focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 outline-none transition-all duration-300 text-gray-800 placeholder-gray-400 text-sm"
-                    placeholder="nama@email.com">
-                </div>
-
-                <div class="space-y-2">
-                  <label for="message" class="block text-sm font-semibold text-gray-800">Pesan</label>
-                  <textarea id="message" name="message" rows="4"
-                    class="w-full px-4 py-3 rounded-xl bg-white border border-emerald-200 focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 outline-none transition-all duration-300 text-gray-800 placeholder-gray-400 resize-none text-sm"
-                    placeholder="Tulis pesan Anda di sini..."></textarea>
-                </div>
-
-                <button type="submit"
-                  class="w-full py-3.5 bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 hover:from-emerald-600 hover:via-emerald-700 hover:to-green-700 text-white font-bold text-base rounded-xl shadow-lg hover:shadow-emerald-400/50 transition-all duration-300 transform hover:scale-105">
-                  <span class="flex items-center justify-center">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
-                    Kirim Pesan
-                  </span>
-                </button>
-              </form>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-semibold text-base mb-1" style="color: var(--text);">Alamat</h4>
+              <p class="text-gray-700 text-sm leading-relaxed">Jl. Pendidikan No. 45, Bandung, Jawa Barat</p>
+            </div>
+          </div>
+          <!-- Telepon -->
+          <div class="flex items-start space-x-4 bg-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div class="w-12 h-12 bg-gradient-to-br text-white rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300" style="background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a2 2 0 0 1 2 1.72c.12.81.37 1.6.73 2.34a2 2 0 0 1-.45 2.11L10 10a16 16 0 0 0 4 4l1.83-1.37a2 2 0 0 1 2.11-.45c.74.36 1.53.61 2.34.73a2 2 0 0 1 1.72 2.01z" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-semibold text-base mb-1" style="color: var(--text);">Telepon</h4>
+              <p class="text-gray-700 text-sm leading-relaxed">+62 812-3456-7890</p>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="flex items-start space-x-4 bg-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div class="w-12 h-12 bg-gradient-to-br text-white rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300" style="background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-10 5L2 7" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-semibold text-base mb-1" style="color: var(--text);">Email</h4>
+              <p class="text-gray-700 text-sm leading-relaxed">info@smkjuara.sch.id</p>
             </div>
           </div>
         </div>
 
-        <!-- Right Content - Map -->
-        <div class="relative">
-          <div class="sticky top-24">
-            <div class="relative group">
-              <!-- Map Container -->
-              <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9003950913816!2d107.6098!3d-6.9175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Jawa%20Barat!5e0!3m2!1sen!2sid!4v1234567890"
-                  width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade" class="w-full">
-                </iframe>
+<!-- Form -->
+<div class="relative bg-white p-8 rounded-3xl shadow-2xl border" style="border-color: var(--secondary);">
+  <h3 class="text-2xl font-bold bg-gradient-to-r bg-clip-text text-transparent mb-6 flex items-center" style="background-image: linear-gradient(to right, var(--primary), var(--secondary));">
+    <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary);">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+    </svg>
+    Kirim Pesan
+  </h3>
+  <form action="#" method="POST" class="space-y-5">
+    <div>
+      <label for="name" class="block text-sm font-semibold" style="color: var(--text);">Nama Lengkap</label>
+      <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda"
+        class="w-full px-4 py-3 rounded-xl bg-white border focus:ring-2 text-sm transition-all duration-300" style="border-color: var(--secondary);" />
+    </div>
+    <div>
+      <label for="email" class="block text-sm font-semibold" style="color: var(--text);">Email</label>
+      <input type="email" id="email" name="email" placeholder="nama@email.com"
+        class="w-full px-4 py-3 rounded-xl bg-white border focus:ring-2 text-sm transition-all duration-300" style="border-color: var(--secondary);" />
+    </div>
+    <div>
+      <label for="message" class="block text-sm font-semibold" style="color: var(--text);">Pesan</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda di sini..."
+        class="w-full px-4 py-3 rounded-xl bg-white border focus:ring-2 resize-none text-sm transition-all duration-300" style="border-color: var(--secondary);"></textarea>
+    </div>
+    <button type="submit"
+      class="w-full py-3.5 bg-gradient-to-r text-white font-bold text-base rounded-xl shadow-lg hover:scale-105 transition-all duration-300" style="background-image: linear-gradient(to right, var(--primary), var(--secondary));">
+      <span class="flex items-center justify-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+        Kirim Pesan
+      </span>
+    </button>
+  </form>
+</div>
 
-                <!-- Overlay gradient on hover -->
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                </div>
+      </div>
+
+      <!-- Right: Map -->
+      <div class="relative">
+        <div class="sticky top-24">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9003950913816!2d107.6098!3d-6.9175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Jawa%20Barat!5e0!3m2!1sen!2sid!4v1234567890"
+              width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy" class="w-full"></iframe>
+            <div class="absolute inset-0 bg-gradient-to-t opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background-image: linear-gradient(to top, var(--primary)/0.2, transparent);"></div>
+          </div>
+          <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 bg-gradient-to-br rounded-lg flex items-center justify-center" style="background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
               </div>
-
-              <!-- Map label -->
-              <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
-                <div class="flex items-center space-x-3">
-                  <div
-                    class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p class="text-sm font-semibold text-emerald-800">Lokasi Kami</p>
-                    <p class="text-xs text-gray-600">Jl. Pendidikan No. 45, Bandung</p>
-                  </div>
-                </div>
+              <div>
+                <p class="text-sm font-semibold" style="color: var(--text);">Lokasi Kami</p>
+                <p class="text-xs text-gray-600">Jl. Pendidikan No. 45, Bandung</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Decorative elements -->
-    <div class="absolute top-1/2 left-10 w-2 h-2 bg-emerald-400 rounded-full"></div>
-    <div class="absolute top-1/3 right-1/4 w-1 h-1 bg-green-500 rounded-full"></div>
-    <div class="absolute bottom-1/4 left-1/3 w-3 h-3 border border-emerald-300 rounded-full"></div>
-  </section>
+  <!-- Tiny Decorative Dots -->
+  <div class="absolute top-1/2 left-10 w-2 h-2 rounded-full opacity-40" style="background-color: var(--primary);"></div>
+  <div class="absolute top-1/3 right-1/4 w-1 h-1 rounded-full opacity-50" style="background-color: var(--secondary);"></div>
+  <div class="absolute bottom-1/4 left-1/3 w-3 h-3 border rounded-full opacity-30" style="border-color: var(--primary);"></div>
+</section>
 
-  <footer class="relative overflow-hidden bg-gradient-to-br from-emerald-900 to-emerald-950 text-gray-300">
-    <div class="relative max-w-7xl mx-auto px-6 pt-20 pb-12">
+  <!-- Footer -->
+<footer class="relative overflow-hidden text-white"
+        style="background: linear-gradient(to bottom right, #0b2e1f, #111111);">
+  <div class="relative max-w-7xl mx-auto px-6 pt-20 pb-12">
 
-      <!-- Main Footer Content -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <!-- Main Footer Content -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
-        <!-- School Info -->
-        <div class="lg:col-span-2 space-y-6">
-          <div class="flex items-center space-x-3 mb-6">
-            <!-- School Logo -->
-            <div
-              class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
-              <img src="asset/logo/logo1.PNG" alt="logo">
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-white">SMK Juara</h3>
-              <p class="text-emerald-300 text-sm">Excellence in Education</p>
-            </div>
+      <!-- School Info -->
+      <div class="lg:col-span-2 space-y-6">
+        <div class="flex items-center space-x-3 mb-6">
+          <!-- School Logo -->
+          <div class="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg"
+               style="background: linear-gradient(to bottom right, var(--primary), #0b2e1f);">
+            <img src="asset/logo/logo1.PNG" alt="logo" class="rounded-lg">
           </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">SMK Juara</h3>
+            <p class="text-sm text-[var(--primary)]">Excellence in Education</p>
+          </div>
+        </div>
 
-          <p class="text-gray-300 leading-relaxed max-w-md">
-            Membangun generasi unggul melalui pendidikan berkualitas dengan teknologi terdepan dan pembelajaran yang
-            inovatif untuk masa depan yang cerah.
+        <p class="leading-relaxed max-w-md text-white/80">
+          Membangun generasi unggul melalui pendidikan berkualitas dengan teknologi terdepan dan pembelajaran yang
+          inovatif untuk masa depan yang cerah.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-6">
+        <h4 class="text-xl font-bold text-white flex items-center">
+          <div class="w-1 h-6 rounded-full mr-3"
+               style="background: linear-gradient(to bottom, var(--primary), #0b2e1f);"></div>
+          Menu Utama
+        </h4>
+        <ul class="space-y-4">
+          <li><a href="#beranda" class="transition hover:text-[var(--primary)] text-white">Beranda</a></li>
+          <li><a href="#tentang-kami" class="transition hover:text-[var(--primary)] text-white">Tentang Kami</a></li>
+          <li><a href="#kompetensi-keahlian" class="transition hover:text-[var(--primary)] text-white">Kompetensi Keahlian</a></li>
+          <li><a href="#fasilitas" class="transition hover:text-[var(--primary)] text-white">Fasilitas</a></li>
+          <li><a href="#berita" class="transition hover:text-[var(--primary)] text-white">Berita</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <h4 class="text-xl font-bold text-white flex items-center">
+          <div class="w-1 h-6 rounded-full mr-3"
+               style="background: linear-gradient(to bottom, var(--primary), #0b2e1f);"></div>
+          Hubungi Kami
+        </h4>
+        <div class="space-y-4">
+          <p class="text-sm leading-relaxed text-white">
+            Jl. Pendidikan No. 45<br>
+            Bandung, Jawa Barat
           </p>
-
-        </div>
-
-        <!-- Quick Links -->
-        <div class="space-y-6">
-          <h4 class="text-xl font-bold text-white flex items-center">
-            <div class="w-1 h-6 bg-gradient-to-b from-emerald-400 to-green-600 rounded-full mr-3"></div>
-            Menu Utama
-          </h4>
-          <ul class="space-y-4">
-            <li><a href="#beranda" class="text-gray-300 hover:text-emerald-400 transition">Beranda</a></li>
-            <li><a href="#tentangg-kami" class="text-gray-300 hover:text-emerald-400 transition">Tentang Kami</a></li>
-            <li><a href="#kompetensi-keahlian" class="text-gray-300 hover:text-emerald-400 transition">Kompetensi
-                Keahlian</a></li>
-            <li><a href="#fasilitas" class="text-gray-300 hover:text-emerald-400 transition">Fasilitas</a></li>
-            <li><a href="#berita" class="text-gray-300 hover:text-emerald-400 transition">Berita</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div class="space-y-6">
-          <h4 class="text-xl font-bold text-white flex items-center">
-            <div class="w-1 h-6 bg-gradient-to-b from-emerald-400 to-green-600 rounded-full mr-3"></div>
-            Hubungi Kami
-          </h4>
-          <div class="space-y-4">
-            <p class="text-gray-300 text-sm leading-relaxed">
-              Jl. Pendidikan No. 45<br>
-              Bandung, Jawa Barat
-            </p>
-            <p class="text-gray-300">+62 812-3456-7890</p>
-            <p class="text-gray-300">info@smkjuara.sch.id</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Social Media & Newsletter -->
-      <div
-        class="border-t border-white/10 pt-8 mb-8 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
-
-        <!-- Social Media -->
-        <div class="flex items-center space-x-6">
-          <h5 class="text-white font-semibold">Follow Us:</h5>
-          <div class="flex space-x-4">
-            <a href="#" class="text-gray-400 hover:text-blue-400 transition">Facebook</a>
-            <a href="#" class="text-gray-400 hover:text-blue-500 transition">Twitter</a>
-            <a href="#" class="text-gray-400 hover:text-pink-400 transition">Instagram</a>
-            <a href="#" class="text-gray-400 hover:text-red-400 transition">YouTube</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Copyright -->
-      <div
-        class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-        <div class="text-gray-400 text-sm">
-          © 2025 SMK Juara. All rights reserved. Made with
-          <span class="text-red-400"></span>
-          for education.
-        </div>
-        <div class="flex space-x-6 text-sm">
-          <a href="#" class="text-gray-400 hover:text-emerald-400 transition">Privacy Policy</a>
-          <a href="#" class="text-gray-400 hover:text-emerald-400 transition">Terms of Service</a>
-          <a href="#" class="text-gray-400 hover:text-emerald-400 transition">Sitemap</a>
+          <p class="text-white">+62 812-3456-7890</p>
+          <p class="text-white">info@smkjuara.sch.id</p>
         </div>
       </div>
     </div>
-  </footer>
+
+    <!-- Social Media -->
+    <div class="border-t pt-8 mb-8 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0"
+         style="border-color: rgba(255,255,255,0.1);">
+      <div class="flex items-center space-x-6">
+        <h5 class="font-semibold text-white">Follow Us:</h5>
+        <div class="flex space-x-4">
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">Facebook</a>
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">Twitter</a>
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">Instagram</a>
+          <a href="#" class="transition hover:text-[var(--primary)] text-white">YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="border-t pt-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+         style="border-color: rgba(255,255,255,0.1);">
+      <div class="text-sm text-white/70">
+        © 2025 SMK Juara. All rights reserved. Made with
+        <span class="text-[var(--primary)]">♥</span>
+        for education.
+      </div>
+      <div class="flex space-x-6 text-sm">
+        <a href="#" class="transition hover:text-[var(--primary)] text-white">Privacy Policy</a>
+        <a href="#" class="transition hover:text-[var(--primary)] text-white">Terms of Service</a>
+        <a href="#" class="transition hover:text-[var(--primary)] text-white">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
 
   <script>
 
@@ -1408,7 +1503,96 @@
       });
     });
   </script>
+    <script>
+// Mobile Menu Toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+  const spans = menuBtn.querySelectorAll('span');
+  if (!mobileMenu.classList.contains('hidden')) {
+    spans[0].style.transform = 'rotate(45deg) translateY(7px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translateY(-7px)';
+  } else {
+    spans[0].style.transform = 'none';
+    spans[1].style.opacity = '1';
+    spans[2].style.transform = 'none';
+  }
+});
+
+// Theme Switcher Dropdown
+const themeBtn = document.getElementById('theme-btn');
+const themeDropdown = document.getElementById('theme-dropdown');
+const themeOptions = document.querySelectorAll('.theme-option');
+
+themeBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  themeDropdown.classList.toggle('hidden');
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (!themeBtn.contains(e.target) && !themeDropdown.contains(e.target)) {
+    themeDropdown.classList.add('hidden');
+  }
+});
+
+// Theme switching logic
+themeOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    const theme = option.getAttribute('data-theme');
+    document.documentElement.className = theme;
+    localStorage.setItem('theme', theme);
+    themeDropdown.classList.add('hidden');
+    
+    // Add visual feedback
+    themeOptions.forEach(opt => opt.classList.remove('bg-[var(--secondary)]/30'));
+    option.classList.add('bg-[var(--secondary)]/30');
+  });
+});
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.documentElement.className = savedTheme;
+  themeOptions.forEach(option => {
+    if (option.getAttribute('data-theme') === savedTheme) {
+      option.classList.add('bg-[var(--secondary)]/30');
+    }
+  });
+}
+
+// Close mobile menu when clicking nav links
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    const spans = menuBtn.querySelectorAll('span');
+    spans[0].style.transform = 'none';
+    spans[1].style.opacity = '1';
+    spans[2].style.transform = 'none';
+  });
+});
+
+// Navbar scroll effect
+let lastScroll = 0;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll > 100) {
+    navbar.classList.add('shadow-md');
+  } else {
+    navbar.classList.remove('shadow-md');
+  }
+  
+  lastScroll = currentScroll;
+});
+</script>
+<script src="js/theme.js"></script>
 </body>
 
 </html>

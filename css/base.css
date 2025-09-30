@@ -1,0 +1,21 @@
+/* base.css */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  transition: all 0.3s ease;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--secondary);
+}
