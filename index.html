@@ -9,6 +9,51 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   <script>
+     const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+    // Enhanced interactive effects
+    document.addEventListener('DOMContentLoaded', function () {
+      // Add hover effects to service tags
+      const tags = document.querySelectorAll('.cursor-pointer');
+      tags.forEach(tag => {
+        tag.addEventListener('mouseenter', function () {
+          this.style.transform = 'translateY(-3px) scale(1.05)';
+        });
+        tag.addEventListener('mouseleave', function () {
+          this.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+
+      // Add glow effect to AI elements
+      const aiElements = document.querySelectorAll('.glass-card');
+      aiElements.forEach(element => {
+        element.addEventListener('mouseenter', function () {
+          this.style.boxShadow = '0 0 20px rgba(116, 198, 157, 0.5)';
+        });
+        element.addEventListener('mouseleave', function () {
+          this.style.boxShadow = '';
+        });
+      });
+
+      // Add smooth scroll for navigation links (if needed)
+      const navLinks = document.querySelectorAll('nav a[href^="#"]');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+  <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -1457,52 +1502,6 @@
 
 
 
-  <script>
-
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
-
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-    // Enhanced interactive effects
-    document.addEventListener('DOMContentLoaded', function () {
-      // Add hover effects to service tags
-      const tags = document.querySelectorAll('.cursor-pointer');
-      tags.forEach(tag => {
-        tag.addEventListener('mouseenter', function () {
-          this.style.transform = 'translateY(-3px) scale(1.05)';
-        });
-        tag.addEventListener('mouseleave', function () {
-          this.style.transform = 'translateY(0) scale(1)';
-        });
-      });
-
-      // Add glow effect to AI elements
-      const aiElements = document.querySelectorAll('.glass-card');
-      aiElements.forEach(element => {
-        element.addEventListener('mouseenter', function () {
-          this.style.boxShadow = '0 0 20px rgba(116, 198, 157, 0.5)';
-        });
-        element.addEventListener('mouseleave', function () {
-          this.style.boxShadow = '';
-        });
-      });
-
-      // Add smooth scroll for navigation links (if needed)
-      const navLinks = document.querySelectorAll('nav a[href^="#"]');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          const targetSection = document.querySelector(targetId);
-          if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      });
-    });
-  </script>
     <script>
 // Mobile Menu Toggle
 const menuBtn = document.getElementById('menu-btn');
@@ -1592,6 +1591,7 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll;
 });
 </script>
+
 <script src="js/theme.js"></script>
 </body>
 

@@ -8,17 +8,51 @@
     <link rel="stylesheet" href="css/theme.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .article-content img {
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
+    <script>
+     const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
 
-        .sidebar-sticky {
-            position: sticky;
-            top: 100px;
-        }
-    </style>
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+    // Enhanced interactive effects
+    document.addEventListener('DOMContentLoaded', function () {
+      // Add hover effects to service tags
+      const tags = document.querySelectorAll('.cursor-pointer');
+      tags.forEach(tag => {
+        tag.addEventListener('mouseenter', function () {
+          this.style.transform = 'translateY(-3px) scale(1.05)';
+        });
+        tag.addEventListener('mouseleave', function () {
+          this.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+
+      // Add glow effect to AI elements
+      const aiElements = document.querySelectorAll('.glass-card');
+      aiElements.forEach(element => {
+        element.addEventListener('mouseenter', function () {
+          this.style.boxShadow = '0 0 20px rgba(116, 198, 157, 0.5)';
+        });
+        element.addEventListener('mouseleave', function () {
+          this.style.boxShadow = '';
+        });
+      });
+
+      // Add smooth scroll for navigation links (if needed)
+      const navLinks = document.querySelectorAll('nav a[href^="#"]');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
 </head>
 
 <body class="bg-gray-50">
